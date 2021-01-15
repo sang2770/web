@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ 1</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="css/css.css">
+    <script type="text/javascript" src="js/js.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        ul {
+            margin: 0px !important;
+            display: block;
+        }
+         ul li{
+            list-style: none;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+        p {
+            font-size: 15px;
+            color: gray;
+            font-weight: bold;
+        }
+        .card {
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/4866413e08.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-md-3 text-center">
+                <img src="img/dog.png" alt="" height="200">
+            </div>
+            <div class="col-md-9 text-center">
+                <img src="img/IMG_3919.jpg" height="200" width="100%">
+            </div>
+        </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        <div class="row">
+            <div class="col-xl-2 col-md-6 pl-5 pt-3">
+                <div class="row trai1">
+                    <p class="col-12">Phân loại  </p>
+                    <ul class="col-12 pl-5">
+                        <li><a href=""><i class="fas fa-paw"></i> Mèo tam thể</a></li>
+                        <li><a href=""><i class="fas fa-paw"></i> Mèo Aln</a></li>
+                        <li><a href=""><i class="fas fa-paw"></i> Mèo Ald</a></li>
+                        <li><a href=""><i class="fas fa-paw"></i> Mèo da nhăn</a></li>
+                        <li><a href=""><i class="fas fa-paw"></i> Mèo Nga</a></li>
+                    </ul>
+                </div>
+                <div class="row trai2">
+                    <p class="col-12">Mức giá</p>
+                    <ul class="col-12 pl-5">
+                        <li><a href=""><i class="fas fa-money-bill-wave-alt"></i> Nhỏ hơn 1 triệu</a></li>
+                        <li><a href=""><i class="fas fa-money-bill-wave-alt"></i> 1-2 triệu</a></li>
+                        <li><a href=""><i class="fas fa-money-bill-wave-alt"></i> 2-5 triệu</a></li>
+                        <li><a href=""><i class="fas fa-money-bill-wave-alt"></i> 5-10 triệu</a></li>
+                        <li><a href=""><i class="fas fa-money-bill-wave-alt"></i> Lớn hơn 10 triệu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-7 mt-3">
+                <div class="row">
+                    <div id="carouselExampleCaptions" class="carousel slide m-2" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://github.com/nhuanh9/imageForSPA/blob/master/nauhouse_khonggian.png?raw=true" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>NAL HOME STAY</h1>
+                                    <h2>Healthy and Balance</h2>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://github.com/nhuanh9/imageForSPA/blob/nal2/homestay-LTK-12.jpg?raw=true" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>Clean</h2>
+                                    <h3>Make you feel comfortable</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://github.com/nhuanh9/imageForSPA/blob/nal2/Hygge-homestay.jpg?raw=true" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>Convenient</h2>
+                                    <h3>We have all things you need!</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://github.com/nhuanh9/imageForSPA/blob/nal2/5714905_18082115180067573531.jpg?raw=true" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>Supper High</h2>
+                                    <h3>You just pay very money!</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+                <div id="giua" class="row mt-2">
+
+                </div>
+            </div>
+            <div class="col-xl-3 mt-3">
+                <img src="img/IMG_0701.JPG" alt="" width="100%">
+            </div>
+        </div>
+
+    </div>
+    <footer class="mt-3 foot">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-12 info">
+                    <hr class="light">
+                    <h3>Đào Như Anh</h3>
+                    <hr class="light">
+                    <p>0359813619</p>
+                    <p>chopperlouis@gmail.com</p>
+                    <p>55/255 Cầu Giấy</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; Louis</h5>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    class Product {
+        constructor(ten, gia, anh) {
+            this.ten = ten;
+            this.gia = gia;
+            this.anh = anh;
+        }
+    }
+
+    let p1 = new Product("LuCi", 1000, "img/1.jpg");
+    let p2 = new Product("MewTwo", 2000, "img/2.jpg");
+    let p3 = new Product("Pikachu", 600, "img/3.jpg");
+    let p4 = new Product("Garen", 300, "img/4.jpg");
+    let p5 = new Product("Rengar", 1600, "img/5.jpg");
+    let p6 = new Product("Yasuo", 1800, "img/6.jpg");
+    let p7 = new Product("Ziggs", 2000, "img/7.jpg");
+    let p8 = new Product("LuLi", 1200, "img/8.jpg");
+    let arrProduct = [p1, p2, p3, p4, p5, p6, p7, p8];
+    let str = '';
+    for (let i=0; i<arrProduct.length; i++) {
+        str+='<div class="col-xl-4 col-md-6  mb-3 text-center"><div class="card" style="width: 100%;">\n' +
+            '  <img class="card-img-top" width="100%" height="250px" src='+arrProduct[i].anh+' alt="Card image cap">\n' +
+            '  <div class="card-body">\n' +
+            '    <h5 class="card-title">'+arrProduct[i].ten+'</h5>\n' +
+            '    <a href="#" class="btn btn-primary">View</a>\n' +
+            '  </div>\n' +
+            '</div></div>'
+    }
+    document.getElementById('giua').innerHTML = str;
+</script>
+</body>
+</html>

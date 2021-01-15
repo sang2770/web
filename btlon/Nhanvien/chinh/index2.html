@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Side Menu CSS</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	
+	
+</head>
+<body>
+
+<div class="than">
+	
+	
+	<div class="row nhanvien">
+		<div class="col-3 col-s-12 search">
+			<div class="menu">
+
+	<input type="checkbox" id="check">
+	<label for="check">
+	  <i class="fas fa-bars" id="btn"></i>
+	  <i class="fas fa-times" id="cancel"></i>
+	</label>
+	<div class="sidebar">
+		<header><h1 style="width: 100%; height: 20%; font-size: 22px;padding-left: 20px;;color: o">Food For Health</h1><hr>
+		        	<div class="ad">
+		        		<p style="width: 100%; height: 30px; font-size: 15px; padding-left: 0px;"><i class="far fa-user-circle" style="margin-right: 5px;"></i>Admin Account</p>
+		        	                <p style="width: 100%; height: 30px;font-size: 13px; padding-left: 0px;">Quản Trị Viên</p></div>
+		        	            
+
+		        </header>
+				<ul>
+					<li><a href="../../Trangchu/index.html"><i class="fas fa-qrcode"></i>Trang chủ</a></li>
+					<li><a href="/Nhanvien/chinh/index.html"><i class="fas fa-link"></i>Nhân viên</a></li>
+					<li><a href="../../Doanhthu/index.html"><i class="fas fa-stream"></i>Doanh thu</a></li>
+					<li><a href="../../dban/dbchinh.html"><i class="fas fa-calendar-week"></i>Order</a></li>
+					<li><a href="../../nguyên liệu/nguyenlieu.html"><i class="far fa-question-circle"></i>Nguyên liệu</a></li>
+					<li><a href="../../event/demo.html"><i class="fas fa-sliders-h"></i>Events</a></li>
+					<li><a href="../../Thuc Don/index.html"><i class="far fa-envelope"></i>Menu Food</a></li>
+				</ul>
+	</div></div>
+	<div class="bophan">
+
+			<ul>
+				<li><h1>Các bộ phận</h1></li>
+				<li><a href="../../nhanluc/giamdoc/giamdoc.html">Ban Giám Đốc</a></li>
+				<li><a href="../../nhanluc/bep/giamdoc.html">Bộ Phận Bếp</a></li>
+				<li><a href="../../nhanluc/ketoan/giamdoc.html">Bộ Phận Kế Toán/Thu Ngân</a></li>
+				<li><a href="../../nhanluc/quanli/giamdoc.html">Bộ Phận Quản Lí</a></li>
+			</ul>
+		
+		<form action="#">
+			<table cellpadding="1">
+				<tr>
+					<th><label for="ten">Họ Và Tên</label></th>
+					<th><input type="text" id="ten" style="margin-left: 3px;"></th>
+				</tr>
+				<tr>
+					<th><label for="Ma">Mã Nhân Viên</label></th>
+					<th><input type="text" id="Ma" style="margin-left: 3px;"></th>
+				</tr>
+				<tr>
+					<th><label for="part">Bộ Phận</label></th>
+					<th><select name="bophan" id="part" style="margin-left: 3px;">
+					    <optgroup label="Ban Giám Đốc">
+					    	<option value="1">Giám Đốc</option>
+					    	<option value="1">Phó Giám Đốc</option>
+					    </optgroup>
+					    <optgroup label="Bộ Phận Bếp">
+					    	<option value="3">Bếp trưởng</option>
+					    </optgroup>
+					    <optgroup label="Bộ Phận quản lí">
+					    	<option value="4">Quản Lí</option>
+					    </optgroup>
+					</select>
+					</th>
+
+				</tr>
+				<tr>
+					<th colspan="2"><button style=" margin:10px 40px; width: 70%;">Search</button></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	</div>
+		<div class="col-9 col-9s-12 bang">
+		<div class="table">
+			<div class="caidat">
+				<h5><a href="them.html"><i class="fas fa-plus"></i>Tạo mới</a></h5>
+				<h5><a href="#"><i class="fas fa-cog"></i>Thiết lập</a></h5>
+				<!-- <hr> -->
+
+			</div>
+			<h1 style="height: 20px; color:black; height: 40px;font-size: 20px;text-align: center;padding-top:10px;">DANH SÁCH NHÂN VIÊN</h1>
+
+			<div class="nv">
+				<table style="width:97%;margin:3px auto;" border="1" cellpadding="1">
+					<tr style="background-color: gray;">
+						<th>STT</th>
+						<th>Ảnh</th>
+						<th>Mã NV</th>
+						<th>Họ Và tên</th>
+						<th>Số điện thoại</th>
+						<th>Chức vụ</th>
+						<th colspan="2">Trạng thái</th>
+						<!-- <th colspan="2"></th> -->
+					</tr>
+					<tr>
+						<td>1</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>100</td>
+						<td>Nguyễn Văn Sang</td>
+						<td>036878852</td>
+						<td>Giám đốc</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>2</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>101</td>
+						<td>Đào Thanh Xuân</td>
+						<td>0311243453</td>
+						<td>Phó Giám đốc</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf1/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>3</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>110</td>
+						<td>Nguyễn Văn Hải</td>
+						<td>0362331321</td>
+						<td>Phó Giám đốc</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf 2/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>4</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>178</td>
+						<td>Nguyễn Văn A</td>
+						<td>0369988173</td>
+						<td>Thu ngân</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf3/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>5</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>109</td>
+						<td>Phạm Thanh Hải</td>
+						<td>036876782</td>
+						<td>Quản Lí</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf4/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>6</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>199</td>
+						<td>Nguyễn Văn Sang</td>
+						<td>036874722</td>
+						<td>Phục Vụ</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf5/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>7</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>111</td>
+						<td>Nguyễn Văn Sang</td>
+						<td>036878421</td>
+						<td>Đầu bếp</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf6/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>8</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>110</td>
+						<td>Nguyễn Văn Nam</td>
+						<td>0368728361</td>
+						<td>Phục vụ</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf7/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr><tr>
+						<td>9</td>
+						<td><img src="admin.png" alt="" style="clip-path: circle(75px at 50% 50%);width: 20px; height: 20px;"></td>
+						<td>200</td>
+						<td>Nguyễn Kim Thành</td>
+						<td>0368712333</td>
+						<td>Thu ngân</td>
+						<td>Đang Làm việc</td>
+						<td><a href="../Inf8/nv1.html"><i class="fas fa-pen-square" style="margin-right: 5px;"></i></a><i class="fas fa-trash-alt"></i></td>
+					</tr>
+						
+				</table>
+				
+			</div>
+			
+		</div>
+
+		<div class="next">
+			<a href="index.html"><i class="fas fa-angle-double-left" style="float: left;"></i></a>
+			<p style="width: 40px; height: 100%;float: left;margin-left: 20px;">Trang</p>
+			<p style="border:1px solid;width: 40px; height: 100%;float: left;margin-left: 20px;" >2</p>
+			<p style="width: 10%; height: 100%;float: left;">Trên 2</p>
+			
+		</div>
+	</div>
+
+
+	
+		</div>
+	
+
+	
+</div>
+
+	
+</body>
+</html>

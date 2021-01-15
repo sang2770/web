@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tổng tiền: <p id="sum"></p>0</h1>
+<h1>số lượng <p id="count"></p>0</h1>
+<button onclick="thanhtoan()">Thanh toán</button>
+
+<script>
+    function thanhtoan(){
+        alert("Bạn cần thanh toán"+sum.innerText+"sl"+count.innerText);
+        sum.innerText="";
+        count.innerText="";
+    }
+    function add(id){
+        sum.innerText=+sum.innerText+arr[id].gia;
+        count.innerText=+count.innerText+1;
+    }
+    class product{
+        constructor(id, ten, gia) {
+            this.id=id;
+            this.ten=ten;
+            this.gia=gia;
+            // this.anh=anh;
+
+        }
+    }
+    let p1= new product(1, "oto", 120000);
+    let p2= new product(1, "oto", 120000);
+    let p3= new product(1, "oto", 120000);
+    let p4= new product(1, "oto", 120000);
+    let p5= new product(1, "oto", 120000);
+    let p6= new product(1, "oto", 120000);
+    let arr=[p1, p2, p3, p4, p5, p6];
+    let str="";
+    for(let i=0;i<arr.length;i++) {
+        str += "<hr>";
+        str += arr[i].ten;
+        str += "<br>";
+        str += arr[i].gia;
+        str+="<br>";
+        str+="<button type='submit' onclick='add("+i+")'>add</button>;"
+    }
+
+
+    // console.log(x);
+    document.write(str);
+    console.log(typeof sum.innerText);
+
+
+</script>
+
+</body>
+</html>

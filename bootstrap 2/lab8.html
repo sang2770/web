@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab_8</title>
+	<style>
+		
+		.nav{
+			width: 100%;
+			height: 50px;
+		}
+		.nav a{
+			padding: 0px 10px;
+			display: block;
+			font-size: 20px;
+			color: blue;
+		}
+		.nav ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.nav li {
+			float: left;
+			line-height: 40px;
+			padding: 0 10px;
+		}
+		.nav li:hover a{
+			background-color: #B5A7A7;
+			color: red;
+		}
+			.container{
+			width: 90%;
+			margin: 0 auto;
+
+		}
+		.header{
+			height: 60px;
+			width: 100%;
+			
+		}
+		.left{
+		
+			height: 600px;
+			width: 20%;
+			float: left;
+			margin-top: 20px
+		}
+		.one{
+			width: 90%;
+			height: 20%;
+			border:1px solid;
+ 			margin-bottom: 20px; 
+		}
+		.one .link{
+			list-style: none;
+			border-bottom: 1px solid;
+			padding: 0 0 0 10px;
+			background-color: #8C8585
+		}
+		
+		.menu li{
+			padding-left: 10px; 
+			list-style: none;
+		}
+		.menu{
+			padding: 10px;
+			margin:0px;
+		}
+		.right{
+			height: 600px;
+			width: 80%;
+			float: left;
+			box-sizing: border-box ;
+		}	
+		.right table{
+			width: 100%;
+			padding:10px; 
+			height: 250px;
+		}
+		.bang1 td{
+			padding-left: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="nav">
+			<ul>
+			<li> <a href="lab_8.html">Home</a></li>
+			<li> <a href="lab_8.html">Products</a></li>
+			<li> <a href="lab_8.html">Services</a></li>
+			<li> <a href="lab_8.html">About</a></li>
+			<li> <a href="lab_8.html">Contact</a></li>
+		</ul>
+		</div>
+		<hr>
+		<div class="header"><h1 style="font-size: 40px">
+			Web Developers, Inc
+		</h1></div>
+		<div class="left">
+			<div class="one">
+			<li class="link">- Quicklink 1</li>
+			<ul class="menu">
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+				<li>Link 4</li>
+				<li>Link 5</li>
+			</ul>
+			</div>
+			<div class="one">
+			<li class="link">- Quicklink 2</li>
+			<ul class="menu">
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+				<li>Link 4</li>
+				<li>Link 5</li>
+			</ul>
+			</div>
+			<div class="one">
+			<li class="link">- Quicklink 3</li>
+			<ul class="menu">
+				<li>Link 1</li>
+				<li>Link 2</li>
+				<li>Link 3</li>
+				<li>Link 4</li>
+				<li>Link 5</li>
+			</ul>
+			</div>
+				
+			
+		</div>
+		<div class="right">
+			<p>Welcom to our sample web page. We'll be disecting this page piece by piece to show you the best way to use HTML,CSS and Javascrips.</p>
+				<form style="width: 100%">
+					<table  border="1" cellspacing="0" class="bang1" style="border-collapse: collapse;">
+						<tr>
+							<th style="text-align: left; font-size: 25px">Create a Profile</th>
+						</tr>
+						<tr>
+							<td><label for="txtn">First Name: </label>
+							<input type="text" name="fn" id="txtn" ></td>
+						</tr>
+						<tr>
+							<td><label for="txt">Last Name: </label>
+							<input type="text" name="ln" id="txt" ></td>
+						</tr>
+						<tr>
+							<td><label for="txtdob">Date of birth: </label>
+							<select name="month" id="txtdob">
+									<option value="0">month</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="5">6</option>
+								</select>
+								<select name="day" id="txtdob">
+									<option value="0">day</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="5">6</option>
+								</select>
+								<select name="year" id="txtdob">
+									<option value="0">year</option>
+									<option value="1">2001</option>
+									<option value="2">2002</option>
+									<option value="3">2003</option>
+									<option value="4">2004</option>
+									<option value="5">2005</option>
+									<option value="5">2006</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Gender:
+								<label for="rdom">Male</label>
+								<input type="radio" name="gen" id="rdom">
+								<label for="rdofm">Female</label>
+								<input type="radio" name="gen" id="rdofm">	
+							</td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="save"></td>
+						</tr>
+					</table>
+				</form>
+				<br>
+				<form style="width: 75%">
+					<table border="1" cellspacing="0" style="border-collapse: collapse">
+						<tr style="background-color: #D1D1D1FF">
+							<th>First Name</th>
+							<th>Last name</th>
+							<th>Date of birth</th>
+							<th>Gender</th>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>Male</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>FeMale</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>Male</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>FeMale</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>Male</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>Male</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>Male</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>2/15/1975</td>
+							<td>Male</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	
+</body>
+</html>

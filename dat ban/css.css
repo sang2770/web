@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+
+   
+}
+body{
+    width: 1000px;
+    min-height: 500px;
+    margin:0px auto;
+}
+.container{
+    background-image: url("bg.jpg");
+    min-height: 1000px;
+  
+}
+[class*='col-']
+{
+    float: left;
+}
+.row::after{
+    clear: both;
+    content: "";
+}
+[class *="col-"]{
+
+	width: 100%;
+}
+@media only screen and (min-width:600px)
+{
+    .col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 { width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+
+}
+@media only screen and (min-width:768px )
+{
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 24%}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+
+}
+.left{
+	min-height: 100px;
+	float: left;
+	font-size: 20px;
+	padding: 5px;
+}
+#sidebar{
+	/*position: fixed;*/
+	font-family: 'Baloo Chettan 2', cursive;
+	width: 100%;
+	height: 100%;
+	transition: all .5s ease;
+}
+#sidebar header{
+	line-height: 65px;
+	font-size: 23px;
+	color:orange;
+	padding:10px 5px;
+	box-sizing: border-box;
+	transition: 0.4s;
+}
+#sidebar ul{
+    margin-left: -40px ;
+    list-style: none;
+
+}
+#sidebar ul li{
+    padding-left: 15px;
+}
+#sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color:#fff;
+	padding-left: 40px;
+	box-sizing: border-box;
+    transition: .4s;
+    text-decoration: none;
+}
+#sidebar ul li:hover a{
+	padding-left: 30px;
+	color: #fff;
+	background: orange;
+	text-decoration: none;
+}
+#sidebar ul a i{
+	margin-right: 16px;
+}
+.right{
+    background-color: #fff;
+    min-height: 1000px;
+    /* padding-top: 10px; */
+}
+.than{
+    height: 100%;
+}
+.ban{
+    background-color: aqua;
+    min-height: 500px;
+}
+.hoadon{
+    background-color: bisque;
+    min-height: 500px;
+}
+.menu{
+    background-color: blue;
+    height: 50px;
+    padding:3px;
+
+}
+.ban{
+    min-height: 500px;
+    background-color: #a8a5a5;
+    border: 1px white solid;
+}
+.menu h1{
+    box-sizing: border-box;
+    width:30%; 
+    height:43px;
+    /* padding: 3px; */
+    text-align: center;
+    padding-top:5px;
+    font-size: 25px;
+    background-color: #fff;
+    border: 1px white solid;
+    border-radius: 20px;
+    float: left;
+  
+}
+.menu input{
+    width: 40%;
+    height: 30px;
+    float:left;
+    /* border-radius: 2px; */
+    margin-left: 40px;
+    margin-top:6px;
+
+}
+.menu button{
+    margin:6px;
+    height: 30px;
+    width: 15%;
+    background-color: #fff;
+    border:1px solid;
+    padding:5px;
+    border-radius: 10px;
+}
+.setting{
+    height: 30px;
+}
+.setting h2{
+    text-align: center;
+    font-size: 15px;
+    height: 100%;
+    width: 100px;
+    margin: 5px;
+    float: left;
+    background-color:#fff;
+    padding-top:6px;
+    border:1px white solid;
+    border-radius: 5px;
+}
+.tb{
+    min-height: 400px;
+    /* background-color: aqua; */
+}
+.mid{
+    width: 90%;
+    margin: 5px auto;
+}
+.table{
+    width: 20%;
+    height: 100px;
+    color: #fff;
+    margin:10px;
+    float: left;
+}
+.inf{
+    height: 30px;
+}
+.inf h2{
+    text-align: center;
+    font-size: 15px;
+    height: 100%;
+    width: 100px;
+    margin: 5px;
+    float: left;
+    background-color:#fff;
+    padding-top:6px;
+    border:1px white solid;
+    border-radius: 5px;
+}
+#bang{
+    width: 100%;
+    margin-top:20px;
+    height: 300px;
+}
+.bang{
+    min-height:400px;
+}
+.bang table{
+    width: 100%;
+    min-height: 300px;
+}
+.bang input{
+    width:90px;
+    height: 30px;
+    text-align: center;
+}
+.bang h1{
+    text-align: right;
+    padding:5px;
+}
+.bang button{
+    float: right;
+    margin:10px;
+    height: 50px;
+    background-color: #fff;
+    border:1px solid;
+    padding:5px;
+    border-radius: 10px;
+    font-size:20px;
+    cursor: pointer;
+}
+
+
+

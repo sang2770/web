@@ -1,0 +1,14 @@
+ul li	
+{
+	list-style: none;
+	float:left;
+	background-color: lightblue;
+	padding:10px 10px;
+	margin:10px;
+	border-radius: 3px;
+}
+ol li
+{
+	clear:left;
+	list-style:upper-roman;
+}

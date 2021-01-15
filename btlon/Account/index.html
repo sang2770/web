@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="onClickmenu.js"></script>
+  <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./magnific/magnific-popup.css">
+</head>
+<body>  
+  <script>
+    function nhap()
+    {
+      let user=document.getElementById("user");
+      let pass=document.getElementById("pass");
+      if(user.value=="admin"&& pass.value=="1234")
+      {
+        alert("Bạn đăng nhập thành công!");
+        location.assign("../Trangchu/index.html");
+      }
+      
+      else if(user.value==""|| pass.value=="")
+      {
+        alert("Có thể bạn chưa nhập mật khẩu hoặc tài khoản!");
+      }
+      else
+      {
+        alert("Tài khoản hoặc mật khẩu không đúng!");
+        user.value="";
+        pass.value="";
+      }
+
+
+    }
+  </script>  
+
+  <div class="Nabar">
+    <h1>Welcome to the restaurant</h1>
+  </div>
+ 
+  <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+       <button type="button" class="toggle-btn" onclick="register()">Register</button>
+    </div>
+       <div class="social-icons">
+        <a href="https://www.facebook.com/"><img src="fb.png"></a>
+        <a href="https://twitter.com/login"><img src="tw.png"></a>
+        <a href="https://accounts.google.com/AddSession/signinchooser?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&flowName=GlifWebSignIn&flowEntry=AddSession"><img src="gp.png" ></a>
+    </div>
+    <div id="login" class="input-group">
+      <input type="text" class="input-field" placeholder="User Id" required id="user">
+      <input type="text" class="input-field" placeholder="Enter Password" required id="pass">
+      <input type="checkbox" class="check-box"><span>Remember Password</span>
+      <button  class="submit-btn" onclick="nhap()"> Log In</button>
+    </div>
+    <form id="register" class="input-group">
+      <input type="text" class="input-field" placeholder="User Id" required>
+       <input type="email" class="input-field" placeholder="Email Id" >
+      <input type="text" class="input-field" placeholder="Enter Password" required>
+      <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+
+ 
+</div>
+
+
+<script>
+var x=document.getElementById("login");
+var y=document.getElementById("register");
+var z=document.getElementById("btn");
+
+function register(){
+  x.style.left= "-400px";
+  y.style.left= "50px";
+  z.style.left="110px";
+}
+function login(){
+  x.style.left= "50px";
+  y.style.left= "450px";
+  z.style.left="0px";
+ 
+
+   }
+</script>
+  <!-- end of Form-box===============================-->
+       
+   
+</body>
+</html>

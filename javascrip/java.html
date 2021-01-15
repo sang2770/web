@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<!--  	<div id="noidung"></div>
+   <script>
+   	class sinhvien{
+   		constructor(name){
+   			this.name=name;
+   			 alert("Hello");
+   		}
+   	}
+   let 	sv=new sinhvien("sang")
+   document.getElementById("noidung").innerHTML="<h1> Hello</h1>";
+   </script>  -->
+
+
+
+
+<div id="giua"></div>
+<div id="duoi"></div>
+
+<!--<script>-->
+<!--	class sinhvien{-->
+<!--		constructor(name, anh) {-->
+<!--			this.name=name;-->
+<!--			this.anh=anh;-->
+<!--		}-->
+
+<!--	}-->
+<!--	let p1=new sinhvien("sang", "1.jpg");-->
+<!--	let p2=new sinhvien("sang", "1.jpg");-->
+<!--	let asv=[p1, p2, p2, p2];-->
+<!--	let str="";-->
+<!--	for(let i=0;i<asv.length;i++)-->
+<!--		str+="<div class=\"col-xl-3 col-md-6  mb-3 text-center\">\n" +-->
+<!--				"\t<div class=\"card\" style=\"width: 100%;\">\n" +-->
+<!--				"\t\t<img src=\"...\" class=\"card-img-top\" alt=\"...\">\n" +-->
+<!--				"\t\t<div class=\"card-body\">\n" +-->
+<!--				"\t\t\t<h5 class=\"card-title\">Card title</h5>\n" +-->
+<!--				"\t\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n" +-->
+<!--				"\t\t\t<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>\n" +-->
+<!--				"\t\t</div>\n" +-->
+<!--				"\t</div>\n" +-->
+<!--				"</div>"-->
+<!--	document.getElementById("giua").innerHTML=str;-->
+<!--</script>-->
+<style>
+	table{
+		width: 1000px;
+
+	}
+	th{
+		height: 80px;
+		width: 30%;
+	}
+</style>
+
+<script>
+	class sinhvien{
+		constructor(name,  tuoi, ma) {
+			this.name=name;
+			this.tuoi=tuoi;
+			this.ma=ma;
+
+		}
+
+
+	}
+	let p1=new sinhvien("Sang", "18", "12");
+	let p2=new sinhvien("Xuan", "18", "13");
+	let p3=new sinhvien("Sang", "18", "15");
+	let p4=new sinhvien("SMai", "18", "17");
+	let arr=[p1,p2, p3, p4];
+	let str="";
+	for(let i=0;i<arr.length;i++)
+	  str+="<table >\n" +
+			  "\n" +
+
+			  "\t<tr>\n" +
+			  "\t\t<th scope=\"row\">1</th>\n" +
+			  "\t\t<td>"+arr[i].name+"</td>\n" +
+			  "\t\t<td>"+arr[i].tuoi+"</td>\n" +
+			  "\t\t<td>"+arr[i].ma+"</td>\n" +
+			  "\t</tr>\n" +
+			  "\t\n" +
+			  "</table>"
+	document.getElementById('giua').innerHTML=str;
+	// docunment.getElementsByClassName("duoiz").innerHTML=str1;
+</script>
+<script>
+	function nhap()
+
+	{
+		let name=document.getElementById("name");
+		let tuoi=document.getElementById("tuoi");
+		let ma=document.getElementById("ma");
+		let str1="";
+		str1+="<table >\n" +
+				"\n" +
+				// "\t<tbody>\n" +
+				"\t<tr>\n" +
+				"\t\t<th scope=\"row\">1</th>\n" +
+				"\t\t<td>"+name.value+"</td>\n" +
+				"\t\t<td>"+tuoi.value+"</td>\n" +
+				"\t\t<td>"+ma.value+"</td>\n" +
+				"\t</tr>\n" +
+				"\t\n" +
+				"</table>"
+		name.value="";
+		tuoi.value="";
+		ma.value="";
+		document.getElementById("duoi").innerHTML=str1;
+		// docunment.getElementsByClassName("duoi").innerHTML=str1;
+
+	}
+</script>
+
+
+<input type="text" id="name">
+<input type="text" id="tuoi">
+<input type="text" id="ma">
+<button onclick="nhap()">Thêm</button>
+
+
+</body>
+</html>

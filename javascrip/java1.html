@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><a href="#"> Tin công nghệ</a></li>
+		<li><a href="#"> Tin công nghệ</a></li>
+		<li><a href="#"> Tin công nghệ</a></li>
+		<li><a href="#"> Tin công nghệ</a></li>
+	</ul>
+	<button id="even">Button</button>
+	<input type="text" class="web" value="the k lay">
+	<div>
+		<input type="text" class="web" value="the laays">
+	</div>
+	<div>
+		<form >
+			username: <input type="text" name="username" id="username"><br>
+			password: <input type="password" id="password">
+			<input type="submit" value="click" onclick=" return validate()">
+		</form>
+	</div>
+	<script>
+		let a=12;
+		let b='12';
+		document.write(a==b);
+		document.write(a===b)
+		let button=document.getElementById("even");
+		button.onclick=function () {
+			alert("Sang rất đẹp zai");
+			// body... 
+		}
+		let elem=document.getElementsByTagName("a");
+		for(let i=0;i<elem.length;i++)
+			{
+				elem[i].onclick=function () {
+					alert("Xin chào ae;");
+					return false;
+					// body... 
+				};
+			}
+		let element=document.querySelectorAll("div input.web");
+		document.write(element[0].value);
+
+		function validate () {
+
+		
+		let user=document.getElementById("username");
+		let pass=document.getElementById("password");
+
+		if(username.value=="")
+		{
+			alert("Ban chua nhap ten dang nhap!");
+			return false;
+		}
+		if(pass.value==""){
+			alert("bajn chuaw nhap mk");
+			return false;
+		}
+		return true;
+	};
+
+// 	 alert(1);
+ 
+// window.onload = function()
+// {
+//     alert(3);   
+// };
+ 
+// alert(2);
+
+	</script>
+</body>
+</html>

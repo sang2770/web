@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript" src="js.js"> </script>
+</head>
+<body>
+
+    <table align="center" style="font-size: 120%;">
+        <form name="frmAccount" action="acb.jsp">
+            <tr>
+                <th colspan="2" style="font-size: 150%; padding-bottom: 20px;">Registration</th>
+            </tr>
+            <tr>
+                <td>Fullname:</td>
+                <td><input type="text" name="fullname" id="name" onfocus="nau1()" onblur="white1()" /></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="text" name="age" id="age" onfocus="nau2()" onblur="white2()" /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" />Male
+                    <input type="radio" name="gender" />Female
+                </td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="text" name="phone" id="phone" onfocus="nau3()" onblur="white3()" /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" id="email" onfocus="nau4()" onblur="white4()" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Submit" onclick="validform(document.forms.frmAccount);">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </form>
+    </table>
+
+</body>
+
+</html>

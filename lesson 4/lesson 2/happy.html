@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Happy Mood</title>
+	<style>
+		h1{
+			color:yellow;
+		}
+		*{
+			background-color: #2a2f36;
+			color: white;
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<div style="text-align: center;">
+		  <img src="happy.jpg" alt="happy" style="width: 300px;height: 400px">
+		  <h1>Happy Mood</h1>
+		</div>
+		<hr>
+		<div class="content">
+		<div>
+		<h1>CURRENT COURES</h1>
+		<ul>
+			<li>CSE 451- Operating system(<ins style="color:red">imd</ins>)<a href="https://thachpham.com/series/html-co-ban">Link</a></li>
+			<li>CSE 321 - Web</li>
+			<li>CSE 122 - Research</li>
+		</ul>
+	</div>
+	<div>
+		<h1>HOBIES</h1>
+		<ol>
+			<li>Game</li>
+			<li>Tennis</li>
+			<li>Music</li>
+		</ol>
+	</div>
+	<div>
+		<a href="../5.html"><u>Back</u></a>
+	</div>
+	<div>		<h1>Courses</h1>
+				<table border="1" cellspacing="0">
+					<tr>
+						<th>Courese number</th>
+						<th>Course title</th>
+						<th>Semester taken</th>
+					</tr>
+					<tr>
+						<th colspan="3">For credit</th>
+					</tr>
+					<tr>
+						<th>6.1223</th>
+						<th>Operating system</th>
+						<th>spring 19</th>
+					</tr>
+					<tr>
+						<th>5.9480</th>
+						<th>Artifical intelligence</th>
+						<th>fall 19</th>
+					</tr>
+					<tr>
+						<th>7.0879</th>
+						<th>Data mining</th>
+						<th>fall 19</th>
+					</tr>
+					<tr>
+						<th colspan="3">For Listener</th>
+					</tr>
+					<tr>
+						<th>8.0308</th>
+						<th>Database</th>
+						<th>fall 19</th>
+					</tr>
+					<tr>
+						<th>6.0309</th>
+						<th>Java programming</th>
+						<th>spring 19</th>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<h1>Submit information</h1>
+				<form>
+					<table>
+						<tr>
+							<td><label for="txtfn">Full Name: </label></td>
+							<td><input type="text" name="fn" id="txtfn"></td>
+						</tr>
+						<tr>
+							<td>Gender:</td>
+							<td>
+								<label for="rdom">Male</label>
+								<input type="radio" name="gen" id="rdom" value="1" checked>
+								<label for="rdofm">Female</label>
+								<input type="radio" name="gen" value="2" id="rdofm">
+
+							</td>
+						</tr>
+						<tr>
+							<td>Hobies: </td>
+							<td>
+								<label for="checkmusic">Music</label>
+								<input type="checkbox" name="music" id="checkmusic">
+								<br>
+								<label for="checkgames">Games</label>
+								<input type="checkbox" name="games" id="checkhames">
+								<br>
+								<label for="checkmoives">Movies</label>
+								<input type="checkbox" name="moives" id="checkmoives">
+								<br>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="txtdob">Date of birth: </label></td>
+							<td><input type="date" name="dob" id="txtdob"></td>
+						</tr>
+						<tr>
+							<td><label for="cbocourntry">Country: </label></td>
+							<td>
+								<select name="country" id="cobcountry">
+									<option value="1">Ha Noi</option>
+									<option value="2">Tokyo</option>
+									<option value="3">Paris</option>
+									<option value="4">London</option>
+									<option value="5">Moscow</option>
+								</select>
+							
+							</td>
+						</tr>
+						<tr>
+							<td><label for="txtf">Picture: </label></td>
+							<td>
+								<input type="file" name="pic" id="txtf">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="txtmail">Email: </label></td>
+							<td>
+								<input type="email" name="email" id="txtmail">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="txtpassword">Password: </label></td>
+							<td>
+								<input type="password" name="password" id="txtpass">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="txtfw">Farorite words</label></td>
+							<td><textarea name="fw" id="txtfw"  cols="30" rows="5"></textarea></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="submit" value="submit">
+								<input type="reset" value="reset">
+							</td>
+						</tr>
+					</table>
+				</form></div>
+
+
+
+</body>
+</html>

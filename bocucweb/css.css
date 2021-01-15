@@ -1,0 +1,48 @@
+body{
+	width: 1000px;
+	margin:0px auto;
+}
+.phandau{
+	width: 1000px;
+	margin:10px 0px 10px 0px;
+	background-color: gray;
+	height: 200px;
+	text-align: center;
+
+	
+}
+.main .phantrai{
+	width: 200px;
+	/*margin:10px 10px 10px 10px;*/
+	background-color: blue;
+	float:left;
+	min-height: 400px;
+	text-align: center;
+	margin:10px 0px 10px 0px;
+
+}
+.main .phangiua{
+	width: 600px;
+	background-color: pink;
+	float:left;
+	min-height: 400px;
+	text-align: center;
+	margin:10px 0px 10px 0px;
+}
+.main .phanphai{
+	width: 200px;
+	background-color: yellow;
+	float: left;
+	min-height: 400px;
+	text-align: center;
+	margin:10px 0px 10px 0px;
+}
+.footer{
+	clear: left;
+	width: 1000px;
+	background: red;
+	min-height: 200px;
+	text-align: center;
+	margin:10px 0px 10px 0px;
+
+}

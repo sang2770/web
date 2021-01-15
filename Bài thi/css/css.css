@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 1000px;
+	margin:0px auto;
+
+}
+.phantren{
+	height: 200px;
+	background: #3fbfb2;
+	
+
+}
+.phantren h1{
+	 font-size: 40px; color: white;
+	 float:left;
+	 padding-top: 60px;
+}
+.phantren h2{
+	 clear: left;
+	 font-size: 40px; color: white;
+	 float:right;
+
+}
+
+.phangiua .phantrai{
+	clear: right;
+	width: 200px;
+	min-height: 400px;
+	/*background: #319931;*/
+	float: left;
+
+}
+.phangiua .phantrai h2{
+	background-color: #3fbfb2;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	}
+.phangiua .center
+{
+	width: 600px;
+	min-height: 400px;
+	background-color: #b2cc49;
+	float:left;
+	text-align: center;
+
+
+}
+.phangiua .center table{
+
+	margin-left: 150px;
+	margin-top: 10px;
+}
+.phangiua .phanphai{
+	width: 200px;
+	float: left;
+	background-color: #e03d3f;
+	min-height: 400px
+
+}
+.booter{
+	clear: left;
+	background: #696460;
+	min-height: 200px;
+	width: 1000px;
+}
+
+

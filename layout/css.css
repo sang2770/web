@@ -1,0 +1,111 @@
+body{
+	width: 1024px;
+	/*min-height: 500px;*/
+	margin: 0px auto;
+}
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+.menutop{
+	width: 1024px;
+	background: white;
+	height: 50px;
+
+}
+.menutop img{
+	float: left;
+	padding:5px 20px;
+
+}
+.menutop form {
+	float: left;
+	text-align:center;
+	padding:10px 20px;
+}
+
+.trai{
+	width: 120px;
+	/*background: gray;*/
+	min-height: 500px;
+	float:left;
+}
+.trai ul {
+	float: left;
+	list-style: none;
+}
+.trai ul li
+{
+	
+	padding:10px 10px;
+	font-weight: bold;
+}
+.trai ul li:hover
+{
+	background: brown;
+	
+}
+
+.phai{
+	width: 904px;
+	min-height: 500px;
+	/*background:blue;*/
+	float:left;
+}
+.phai .tren{
+	height: 200px;
+	/*background:#24c520;*/
+}
+.phai .tren .trentrai{
+	width: 400px;
+	height: 200px;
+	/*background:pink;*/
+	float: left;
+
+}
+.phai .tren .trentrai img
+{
+	width: 380px;
+	height: 180px;
+	padding:10px;
+	border-radius: 2px;
+}
+.phai .tren .trenphai{
+	 width: 504px;
+	 height: 200px;
+	 float: left;
+	 /*background: brown;*/
+}
+.phai .tren .trenphai img
+{
+	width: 484px;
+	height: 180px;
+	padding:10px;
+}
+.duoi{
+	width: 904px;
+
+}
+.duoi ul
+{
+	list-style: none;
+}
+.duoi ul li{
+	
+	float: left;
+	margin:10px;
+}
+.duoi ul li img{
+	float: left;
+	width: 280px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+.duoi ul li h1{
+	clear: left;
+	font-size:15px;
+	/*margin-top:20px;*/
+	text-align: center;
+	
+	
+}

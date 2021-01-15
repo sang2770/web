@@ -1,0 +1,51 @@
+*{
+	margin: 2;
+	padding: 2;
+}
+/*h1{
+    		color:red;
+    		font-size:40px;
+    	}
+    	.le{
+    		color:green;
+    	}
+    	#dong2{
+    		color:green;
+    	}*/
+    .phantren{
+    	width: 100%;
+    	height: 300px;
+    	background-color:blue;
+    	border-radius: 50px;
+    	-webkit-box-shadow: 11px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 11px 10px 5px 0px rgba(0,0,0,0.75);
+        text-align: center;
+    }
+    .phangiua{
+        width: 1266px;
+        min-height: 400px;
+        background-color: green;
+
+    }
+    .phangiua .phantrai{
+    	width:1000px;
+    	min-height: 300px;
+    	background-color: #00ffcb;
+    	/*margin: 10px;*/
+        float: left;
+    }
+    .phangiua .phanphai{
+        background-color: black;
+        float: left;
+        height: 300px;
+        width: 300px;
+
+    }
+    .phanduoi{
+    	width: 1000px;
+    	height: 100px;
+    	background-color: purple;
+   
+    }
+

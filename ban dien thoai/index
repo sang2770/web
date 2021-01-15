@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="csrf-token" content="1ppO75rpHwguGDMiOOyfLH2mwUZvWmySzXUlRdxV">
+	<title>Laptop</title>
+	<link rel="stylesheet" href="/css/app.css">	
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/footer.css">
+	<link rel="stylesheet" href="/css/home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style type="text/css">
+	.productName, .price, .order{
+	text-align: center;
+}
+.productName{
+	font-weight: bold;
+}
+.thumbnail a{
+	margin-right: 5px; 
+}
+.thumbnail{
+	padding: 10px;
+}
+.order{
+	padding-top: 10px;
+}
+.home span{
+	font-family: Mightype; 
+	font-size: 40px;
+}
+.home{
+	padding: 30px;
+	text-align: center;
+}
+.imgProduct{
+  	transition: transform 0.5s !important; /* Animation */
+}
+
+.imgProduct:hover {
+	z-index: 1;
+  	transform: scale(1.25) !important; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#pagination{
+	float: right; 
+	display: none;
+	margin-top: 35px; 
+	margin-right: 20px;
+	position: inherit;
+}
+.page-item.active .page-link{
+ 	background-color: #ba1826;
+ 	border-color: #ba1826; 
+}
+.page-link{
+	color: black;
+}
+body{
+	background-color: rgba(0,0,0,.08);
+	font-family: Roboto;
+	font-size: 15px;
+}
+header{
+	height: 120px;
+	background-color: rgba(0,0,0,.9);
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+#goTop {
+	display: none;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	border-radius: 50px!important;
+	z-index: 99;
+	outline: none;
+	background-color: rgba(0,0,0,.3);
+	color: white;
+	cursor: pointer;
+	padding: 18px 22px 4.55px 22px;
+	border-radius: 4px;
+}
+.fa-phone{
+	font-size: 16px; 
+	line-height: 18px;
+}
+@font-face {
+ 	 font-family: Crass;
+  	src: url(../fonts/Crass.ttf);
+}
+@font-face {
+  	font-family: Mightype;
+  	src: url(../fonts/Mightype.otf);
+}
+@font-face {
+  	font-family: Roboto;
+  	src: url(../fonts/Roboto-Regular.ttf);
+}
+.title h1{
+	padding-top: 10px;
+	color: rgb(255,106,2);
+	font-family: Crass;
+    padding-left: 90px;
+}
+.title p{
+	color: white;
+	padding-left: 90px;
+	font-size: 15px;
+}
+#contact{
+	position: absolute;
+	right: 50px;
+	padding-top: 8px;
+}
+#contact ul li{
+	padding-top: 3px;
+	line-height: 20px;
+	list-style: none;
+	color: white;
+	float: right;
+}
+.input-group{
+	padding-left: 40px;
+	padding-right: 45px;
+	padding-top: 25px;
+}
+nav{
+	background-color: rgb(255,106,2)!important;
+	z-index: 999;
+}
+.header{
+	background-color: #ff5200!important;
+	color: white;
+	font-size: .95rem;
+}
+.slide{
+	padding-top: 10px;
+	padding-left: 30px;
+}
+.container-fluid{
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+.content{
+	background-color: white;
+	height: 1339px;
+	margin-top: 15px;
+	padding-top: 20px;
+	padding-left: 25px;
+}
+.list-group{
+	padding-top: 15px;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+.text{
+	color: rgb(255,106,2);
+	padding-top: 10px;
+}
+.promptTextBubble{
+	background-color: #f1f0f0;
+	border-radius: 1.3em;
+	display: inline-block;
+	font-size: 11pt;
+	padding: 8px 12px;
+}
+.mess{
+	padding-left: 5px;
+	width: 375px;
+	height: 202px;
+    background-color: #fff;
+    border-radius: 12px;
+    bottom: 0;
+    box-shadow: 0 1pt 12pt rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;  
+    cursor: pointer;
+}
+.subButtonText {
+    color: rgba(0, 0, 0, .45);
+    line-height: 20px;
+    padding-top: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+.btn-mess{
+	padding-top: 12px;
+	padding-left: 35px;
+}
+.btn-mess a{
+	width: 89%; 
+	border-radius: 12px;
+}
+.name{
+	color: rgba(0, 0, 0, .45);
+	font-size: 12px; 
+	padding-left: 75px;
+}
+.card-title a:hover{
+	color: rgb(255,106,2);
+}
+.card-title a{
+	color: #ba1826;
+}
+.row{
+	margin-right: 0px;
+}
+.list-group-item{
+	background-color: rgba(0,0,0,.95);
+}
+.list-group-item-action{
+	color: rgba(255,255,255,.75);
+}
+.productName, .price, .order{
+	text-align: center;
+}
+.productName{
+	font-weight: bold;
+}
+.thumbnail a{
+	margin-right: 5px; 
+}
+.thumbnail{
+	padding: 10px;
+}
+.order{
+	padding-top: 10px;
+}
+.home span{
+	font-family: Mightype; 
+	font-size: 40px;
+}
+.home{
+	padding: 30px;
+	text-align: center;
+}
+.imgProduct{
+  	transition: transform 0.5s !important; /* Animation */
+}
+
+.imgProduct:hover {
+	z-index: 1;
+  	transform: scale(1.25) !important; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#pagination{
+	float: right; 
+	display: none;
+	margin-top: 35px; 
+	margin-right: 20px;
+	position: inherit;
+}
+.page-item.active .page-link{
+ 	background-color: #ba1826;
+ 	border-color: #ba1826; 
+}
+.page-link{
+	color: black;
+}
+
+</style>
+</head>
+<body>
+	<header class="container-fluid" id="login_wrapper">
+	<div class="row">
+		<div class="col-md-3 title">
+			<h1>LAPTOP</h1>
+			<p><i class="fa fa-check"></i> UY TÍN<br><i class="fa fa-check"></i> CHẤT LƯỢNG</p>	
+		</div>
+		<div class="col-md-6">
+			<form method="get" action="http://laptop.cc/search/findKey">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Nhập tên sản phẩm cần tìm ..." name="keyword" autocomplete="off">
+					<div class="input-group-append">
+						<button class="btn btn-light">
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			<div class="text" style="padding-left: 40px;">
+				<p><i class="fa fa-star"></i> Hệ thống bán lẻ laptop cũ, mới số 1 Việt Nam.</p>
+			</div>
+		</div>
+		<div class="col-md-3" id="contact" style="padding-right: 0px;">
+			<ul class="container-fluid">
+				<li class="row">
+					<i class="fa fa-phone"></i>&nbsp;Gọi tư vấn : <span style="font-size: 13.5px; color: rgb(255,106,2); font-style: italic;">&emsp;&nbsp;&nbsp;&nbsp;035.981.3619</span>
+				</li>
+				<li class="row">
+					<i class="fa fa-phone"></i>&nbsp;Gọi đặt hàng : <span style="font-size: 13.5px; color: rgb(255,106,2); font-style: italic;">&nbsp;&nbsp;094.692.0529</span>
+				</li>
+				<li class="row" style="padding-top: 10px;">
+					<span><i class="fa fa-angle-double-right" style="font-size: 16px; line-height: 15px;"></i>&nbsp;<span style="font-size: 14px; color: rgb(255,106,2); font-weight: bold;">&nbsp;MIỄN PHÍ GIAO HÀNG TOÀN QUỐC</span></span>
+				</li>
+				<li class="row">
+					<span><i class="fa fa-angle-double-right" style="font-size: 16px; line-height: 15px;"></i>&nbsp;<span style="font-size: 14px; color: rgb(255,106,2); font-weight: bold">CAM KẾT CHẤT LƯỢNG SẢN PHẨM</span></span>
+				</li>
+			</ul>
+		</div>
+	</div>			
+</header>
+<nav class="navbar navbar-expand-lg navbar-light">
+	<a class="navbar-brand" href="#" style="width: 50px;text-align: center;">
+		<i class="fa fa-github-alt" style="font-size: 25px;"></i>
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="/">TRANG CHỦ</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="http://laptop.cc/introduce">GIỚI THIỆU</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="http://laptop.cc/news">TIN TỨC</a>
+			</li>
+			<li class="nav-item dropdown ">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					SẢN PHẨM
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="http://laptop.cc/search/mahang/1">Laptop Dell</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="http://laptop.cc/search/mahang/2">Laptop Asus</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="http://laptop.cc/search/mahang/3">Laptop HP</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="http://laptop.cc/search/mahang/4">Macbook</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="http://laptop.cc/search/mahang/5">Laptop Acer</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="http://laptop.cc/search/mahang/7">Laptop Lenovo</a>
+				</div>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="http://laptop.cc/contact">LIÊN HỆ</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav justify-content-end">
+
+						<li class="nav-item ">
+				<a class="nav-link" href="http://laptop.cc/login">Đăng nhập</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="http://laptop.cc/register">Đăng ký</a>
+			</li>
+						<li class="nav-item ">
+				<a class="nav-link" href="http://laptop.cc/cart"><i class="fa fa-shopping-basket" style="font-size: 15px;"></i> Giỏ hàng</a>
+			</li>
+		</ul>		
+	</div>
+</nav><div class="container-fluid" id="ads" style="display: none;">
+	<div class="row">
+		<div class="col-md-4" style="padding-right: 0px;">
+			<img src="/img/left1.jpg" width="98%" style="padding-top: 10px; padding-left: 55px;">
+		</div>
+		<div class="col-md-8" style="padding-left: 0px; right: 33px;">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/img/2.png" width="102.5%">
+    </div>
+    <div class="carousel-item">
+      <img src="/img/5.jpg" width="102.5%">
+    </div> 
+    <div class="carousel-item">
+      <img src="/img/3.jpg" width="102.5%">
+    </div>
+    <div class="carousel-item">
+      <img src="/img/4.png" width="102.5%">
+    </div>
+    <div class="carousel-item">
+      <img src="/img/1.png" width="102.5%">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="right: -28px;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>		</div>
+	</div>	
+</div>		
+
+	<div class="card mess" id="mess" style="bottom: 15px; left: 10px;">	
+	<div class="card-body" style="padding-top: 10px;">
+		<div class="name">
+			Laptop.cc
+			<button class="close" onclick="hideMess();"><i class="fa fa-times" style="font-size: 17.5px;"></i></button>
+		</div>	
+		<div class="row">
+			<div class="col-md-2"><img src="/img/logo.jpg" style="width: 142%; margin-top: 10px; border-radius: 50%;">
+			</div>
+			<div class="col-md-10">
+				<span class="promptTextBubble"><span>Kính chào quý khách. Laptop.cc có thể hỗ trợ gì cho quý khách không ạ?</span></span>
+			</div>
+		</div>	
+		<div class="btn-mess">
+			<a href="https://www.facebook.com/" class="btn btn-primary"><i class="fa fa-comments" style="font-size: 25px;"></i>&emsp;Đăng nhập vào Messenger</a>
+		</div>
+		<div class="subButtonText">
+			<p>Chat với Laptop.cc trong Messenger</p>
+		</div>	
+	</div>
+</div>
+
+	<div class="container-fluid row" style="padding-top: 0px">
+		<div class="col-md-3" style="padding-right: 10px;">
+			<div class="list-group">
+
+  <h6 class="list-group-item header"><i class="fa fa-bars"></i>&emsp;DANH MỤC SẢN PHẨM</h6>
+
+  
+   
+  <a href="http://laptop.cc/search/mahang/1" class="list-group-item list-group-item-action">Laptop Dell</a>
+
+  
+  <a href="http://laptop.cc/search/mahang/2" class="list-group-item list-group-item-action">Laptop Asus</a>
+
+  
+  <a href="http://laptop.cc/search/mahang/3" class="list-group-item list-group-item-action">Laptop HP</a>
+
+  
+  <a href="http://laptop.cc/search/mahang/4" class="list-group-item list-group-item-action">Macbook</a>
+
+  
+  <a href="http://laptop.cc/search/mahang/5" class="list-group-item list-group-item-action">Laptop Acer</a>
+
+  
+  <a href="http://laptop.cc/search/mahang/7" class="list-group-item list-group-item-action">Laptop Lenovo</a>
+
+  
+</div>  
+
+<div class="list-group" style="padding-top: 19px;">
+
+	<h6 class="list-group-item header"><i class="fa fa-bars"></i>&emsp;GIÁ SẢN PHẨM</h6>
+
+	
+	
+	<a href="http://laptop.cc/search/mucgia/1" class="list-group-item list-group-item-action">Dưới 10 triệu</a>
+
+	
+	<a href="http://laptop.cc/search/mucgia/2" class="list-group-item list-group-item-action">Từ 10 - 20 triệu</a>
+
+	
+	<a href="http://laptop.cc/search/mucgia/3" class="list-group-item list-group-item-action">Từ 20 - 30 triệu</a>
+
+	
+	<a href="http://laptop.cc/search/mucgia/4" class="list-group-item list-group-item-action">Từ 30 - 40 triệu</a>
+
+	
+	<a href="http://laptop.cc/search/mucgia/5" class="list-group-item list-group-item-action">Từ 40 - 60 triệu</a>
+
+	
+	<a href="http://laptop.cc/search/mucgia/6" class="list-group-item list-group-item-action">Từ 60 - 80 triệu</a>
+
+	
+	<a href="http://laptop.cc/search/mucgia/7" class="list-group-item list-group-item-action">Trên 80 triệu</a>
+
+	
+</div>
+<div id="ads2" style="display: block;">	
+	<img src="/img/left2.jpg" width="100%" style="padding: 19.5px 5px 0px 15px">
+</div>
+		</div>
+		<div class="col-md-9 content">
+			<div class="home">
+	<i class="fa fa-github-alt" style="font-size: 25px;"></i>
+	<span>&emsp;~~ Laptop World ~~&emsp;</span>
+	<i class="fa fa-github-alt" style="font-size: 25px;"></i>
+</div>
+<section class="container-fluid" style="position: relative;">
+		<div class="container">
+		<div class="row">
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/acer_predator_helios_700_-anh3.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/1" style="color: #ba1826;">Laptop Acer Predator 700</a>
+						</div>	
+						<div class="price">
+							109.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/1" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/asus_zenbook_pro_14_ux480fd_3.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/2" style="color: #ba1826;">Laptop Asus ZenBook 14</a>
+						</div>	
+						<div class="price">
+							39.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/2" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/asus_rog_zephyrus_m_gu502gu-anh1.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/3" style="color: #ba1826;">Laptop Asus Zephyrus M</a>
+						</div>	
+						<div class="price">
+							47.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/3" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/acer_sf515-silver-anh1.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/4" style="color: #ba1826;">Laptop Acer Predator 500</a>
+						</div>	
+						<div class="price">
+							59.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/4" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/asus_zenbook_ux433_1_5.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/5" style="color: #ba1826;">Laptop Asus Zenbook 14</a>
+						</div>	
+						<div class="price">
+							26.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/5" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/hp_elite_x2_1013_g3_5dj72pa_2.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/6" style="color: #ba1826;">Laptop HP EliteBook X2</a>
+						</div>	
+						<div class="price">
+							42.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/6" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/acer_swift_3_sf314-anh3_2.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/7" style="color: #ba1826;">Laptop Acer Swift 3</a>
+						</div>	
+						<div class="price">
+							24.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/7" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/hp_elitebook_735_g5_5zu72pa-3_2.png" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/8" style="color: #ba1826;">Laptop HP EliteBook 735</a>
+						</div>	
+						<div class="price">
+							9.500.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/8" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/mac_space_gray_2_0.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/9" style="color: #ba1826;">MacBook Air MREA2</a>
+						</div>	
+						<div class="price">
+							30.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/9" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/macbook_air_mree2_13-inch_128g_gold_0.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/10" style="color: #ba1826;">Macbook Air MREE2</a>
+						</div>	
+						<div class="price">
+							28.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/10" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/mac-u2-silver-0_8_0_0.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/11" style="color: #ba1826;">Macbook Pro MR9U2</a>
+						</div>	
+						<div class="price">
+							45.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/11" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/dell_xps_15_9575_70170134_7.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/12" style="color: #ba1826;">Laptop Dell XPS 15 9575</a>
+						</div>	
+						<div class="price">
+							59.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/12" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/dell_xps_13_9370_415px1_-_silver_anh4_0_0_0.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/13" style="color: #ba1826;">Laptop Dell XPS 13 9380</a>
+						</div>	
+						<div class="price">
+							39.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/13" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/dell_xps_13_9370_rose_gold_anh4_0.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/14" style="color: #ba1826;">Laptop Dell XPS 13 9370</a>
+						</div>	
+						<div class="price">
+							38.500.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/14" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/8cedfdac4d15909cb54a0dee45e384ef.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/15" style="color: #ba1826;">Laptop Asus Vivobook S430</a>
+						</div>	
+						<div class="price">
+							21.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/15" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="col-xs-12 col-sm-8 col-md-3" style="padding-right: 0px;">	
+				<div class="thumbnail" style="position: relative; text-align: center;">
+					<img width="82%" src="/img/products/MREE2-3.jpg" class="imgProduct">
+					<div style="z-index: 2; position: inherit;">
+						<div class="productName">
+							<a href="http://laptop.cc/detailProduct/16" style="color: #ba1826;">Macbook Air MREE3</a>
+						</div>	
+						<div class="price">
+							27.000.000 vnđ
+						</div>
+						<div class="order">
+							<a href="http://laptop.cc/cart/add/16" class="btn btn-outline-danger" style="width: 100px;">Đặt mua</a>
+						</div>
+					</div>
+				</div>
+			</div>
+					</div>
+	</div>				
+		
+	<div id="pagination">
+		<ul class="pagination">
+			<li class="page-item">
+				<a class="page-link" href="/"><i class="fa fa-angle-double-left"></i></a>
+			</li>
+			<li class="page-item active">
+				<a class="page-link" href="/">1</a>
+			</li>
+			<li class="page-item ">
+				<a class="page-link" href="http://laptop.cc/page=2">2</a>
+			</li>
+			<li class="page-item">
+				<a class="page-link" href="http://laptop.cc/page=2"><i class="fa fa-angle-double-right"></i></a>
+			</li>
+		</ul>	
+	</div>
+</section>
+	
+		</div>	
+	</div>	
+	
+	<div class="row" style="padding: 10px 0px 0px 15px;">
+    <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+         <h6 style="font-weight: bold;"><i class="fa fa-angle-double-right"></i> TIN TỨC</h6>
+        <img src="/img/news/new2.png" style="width: 150px; height: 70px; float: left; padding-right: 10px;">
+        <div>
+          <div class="card-title" style="font-weight: bold; font-size: 15px; margin-bottom: 0px;">
+            <a href="http://laptop.cc/detailNew/2" style="text-decoration: none;">Hướng dẫn sử dụng laptop đúng cách tránh đột tử</a>
+          </div> 
+          <div style="color: rgba(0, 0, 0, .45); font-size: 13px;">2019-07-18 10:06:21</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+         <h6 style="font-weight: bold;"><i class="fa fa-angle-double-right"></i> TIN TỨC</h6>
+        <img src="/img/news/new3.jpg" style="width: 150px; height: 70px; float: left; padding-right: 10px;">
+        <div>
+          <div class="card-title" style="font-weight: bold; font-size: 15px; margin-bottom: 0px;">
+            <a href="http://laptop.cc/detailNew/3" style="text-decoration: none;">4 SAI LẦM của SINH VIÊN khi chọn mua LAPTOP</a>
+          </div> 
+          <div style="color: rgba(0, 0, 0, .45); font-size: 13px;">2019-07-18 10:17:08</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+         <h6 style="font-weight: bold;"><i class="fa fa-angle-double-right"></i> TIN TỨC</h6>
+        <img src="/img/news/new5.jpg" style="width: 150px; height: 70px; float: left; padding-right: 10px;">
+        <div>
+          <div class="card-title" style="font-weight: bold; font-size: 15px; margin-bottom: 0px;">
+            <a href="http://laptop.cc/detailNew/5" style="text-decoration: none;">Có Nên Cắm Sạc Laptop Liên Tục Không?</a>
+          </div> 
+          <div style="color: rgba(0, 0, 0, .45); font-size: 13px;">2019-07-19 10:00:24</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> 	
+	<button class="btn" id="goTop"><i style="font-size: 26px; line-height: 35px;" class="fa fa-sort-up"></i></button>
+
+	<footer>
+	<div class="site-footer">		
+		<div class="container">			
+			<div class="footer-inner">
+				<div class="row">
+					<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+						<div class="footer-widget">
+							<h3 style="color: rgb(255,106,2);">Laptop.cc</h3>
+							<div class="ttlh">
+								<p>Showroom 1: 165 Cầu Giấy - Cầu Giấy - Hà Nội
+									<br>
+									Showroom 2: 165 Dương Quảng Hàm - Hà Nội
+									<br>
+									Email : phuong_anh@gmail.com
+									<br>
+								Hotline : 1900.888.888</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+						<div class="footer-widget">
+							<h4><span><i class="fa fa-star"></i> Hướng dẫn</span></h4>
+							<div class="list-menu">
+								
+								<a href="http://laptop.cc/register">Đăng ký thành viên</a> 
+								
+								<a href="#">Mua hàng Online</a> 
+								
+								<a href="#">Mua hàng trả góp</a> 
+								
+								<a href="#">Hướng dẫn dùng Laptop</a> 	
+
+								<a href="#">Tư vấn chọn Laptop</a> 
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+						<div class="footer-widget">
+							<h4><span><i class="fa fa-star"></i> Chính sách</span></h4>
+							<div class="list-menu">
+								
+								<a href="#">Chính sách thanh toán</a>
+								
+								<a href="#">Chính sách vận chuyển</a>
+
+								<a href="#">Chính sách đổi trả</a>
+								
+								<a href="#">Chính sách hoàn tiền</a>						
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+						<div class="footer-widget">
+							<h4><span><i class="fa fa-star"></i> Hỗ trợ</span></h4>
+							<div class="list-menu">
+								
+								<a href="#">DV Hỗ trợ miễn phí</a> 
+								
+								<a href="#">Hỗ trợ đổi cũ lấy mới</a> 
+								
+								<a href="#">Hỗ trợ giải đáp</a> 
+								
+								<a href="#">Hợp tác bán hàng</a> 
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-1 col-lg-2">
+						<div class="footer-widget no-border">
+							<h4><span><i class="fa fa-star"></i> Kết nối</span></h4>           
+							<div class="list-menu list-menu-social">
+
+								<a href="#">
+									<i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+								</a>
+								<a href="#">
+									<i class="fa fa-youtube-play" aria-hidden="true"></i> Youtube
+								</a>
+								<a href="#">
+									<i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+								</a>
+								<a href="#">
+									<i class="fa fa-google-plus" aria-hidden="true"></i> Google Plus
+								</a>
+								<a href="#">
+									<i class="fa fa-map"></i> Chỉ dẫn đường đi
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="head">
+		<span style=" color: rgba(255, 255, 255, .15);font-size: 14px;">© Bản quyền thuộc về Laptop.cc Việt Nam | Cung cấp bởi Phương & Anh</span>
+	</div>
+</footer>	<script src="/js/app.js?v=1602686104"></script>	
+	<script src="/js/nav.js"></script>
+	
+</body>
+</html>	

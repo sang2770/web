@@ -1,0 +1,104 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+body{
+    font-family: Time New Roman;
+    /*background-color: gray;*/
+    margin: 0px auto;
+    width: 1000px;
+
+}
+.menu{
+    background: #262424;
+    height: 40px;
+    width: 1000px;
+
+
+}
+
+.menu ul li
+{
+    list-style: none;
+    float: left;
+    height: 40px;
+
+
+}
+.menu ul li a
+{
+    text-decoration:none;
+    line-height: 10px;
+    color:white;
+    padding: 0px 20px 0px 20px;
+    display: block;
+    border-right: 1px solid white;
+    line-height: 40px;
+
+
+}
+.content
+{
+    height: 280px;
+    width: 1000px;
+}
+.phanchinh
+{
+    width: 800px;
+    min-height: 400px;
+    /*background: gray;*/
+    float:left;
+    padding-top: 10px;
+
+}
+.bottom
+{
+    width: 200px;
+    min-height: 400px;
+    /*background-color:yellow;*/
+    float: left;
+}
+.phanchinh ul li img
+{
+    margin-top: 10px;
+    float:left;
+    margin-right: 10px;
+
+}
+.phanchinh ul li
+{
+    
+    /*clear: left;*/
+    list-style: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+    float:left;
+    /*margin-bottom: 20px;*/
+
+
+
+
+}
+.phanchinh ul li h1
+{
+    font-size: 15px;
+
+}
+.bottom h1{
+    font-size: 15px;
+    text-align: center;
+    background-color: gray;
+    height: 30px;
+    margin-top: 0px;
+    padding-top:5px;
+
+}
+.bottom ul li
+{
+    
+    margin-top:5px;
+    list-style: none;
+    line-height: 30px;
+    display: block;
+    border-bottom:1px solid red;
+}

@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    position: fixed;
+    background-color:#393e46;
+    padding:20px;
+    width: 100%;
+    height: 30px;
+}
+.left h3{
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 900;
+}
+.left span
+{
+    color:blue;
+}
+.logout{
+    padding: 5px;
+    background-color: #19B3D3;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+    
+}
+.logout:hover{
+    background-color: #7e8ca0;
+
+}
+.sidebar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    /* transition-property: left; */
+
+}
+.sidebar{
+    background-color: #7e8ca0;
+    margin-top: 70px;
+    padding-top:30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 1000px;
+    transition: 0.5s;
+    transition-property: left;
+
+}
+.sidebar h4{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height:60px ;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-left: 40px;
+    transition: 0.5s;
+    transition-property:background-color ;
+}
+.sidebar a:hover{
+    background-color: aqua;
+}
+.sidebar i{
+    padding-right:10px;
+}
+label #icon{
+    z-index:1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    font-size: 20px;
+    margin:5px 0;
+    transition: 0.5s;
+    transition-property: color;
+    left: 300px;
+}
+label #icon:hover{
+    color:#aaaaaa;
+}
+#check:checked~.sidebar{
+    left:-190px;
+
+}
+#check:checked~.sidebar a span{
+    display:none;
+
+}
+#check:checked~.sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+#check:checked~.sidebar img{
+    margin-left: 190px;
+    width: 50px;
+    height: 50px;
+}
+input{
+    display: none;
+}
+.content{
+    margin-left: 250px;
+    background-size: cover;
+    transition: 0.5s;
+    /* transition-property: left; */
+    
+}
+.content img{
+    width: 100%;
+}
+#check:checked~.content{
+    margin-left: 60px;
+}
+
+
+

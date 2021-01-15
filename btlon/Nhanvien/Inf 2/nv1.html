@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Side Menu CSS</title>
+	<link rel="stylesheet" href="css.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+	
+	
+</head>
+<body>
+
+<div class="than">
+
+	<div class="row nhanvien">
+		<div class="col-3 col-s-12 search">
+		<div class="menu">
+
+	<input type="checkbox" id="check">
+	<label for="check">
+	  <i class="fas fa-bars" id="btn"></i>
+	  <i class="fas fa-times" id="cancel"></i>
+	</label>
+	<div class="sidebar">
+		<header><h1 style="width: 100%; height: 20%; font-size: 22px;padding-left: 20px;">Food For Health</h1><hr>
+		        	<div class="ad">
+		        		<p style="width: 100%; height: 30px; font-size: 15px; padding-left: 0px;"><i class="far fa-user-circle" style="margin-right: 5px;"></i>Admin Account</p>
+		        	                <p style="width: 100%; height: 30px;font-size: 13px; padding-left: 0px;">Quản Trị Viên</p></div>
+		        	            
+
+		        </header>
+				<ul>
+					<li><a href="../../Trangchu/index.html"><i class="fas fa-qrcode"></i>Trang chủ</a></li>
+					<li><a href="/Nhanvien/chinh/index.html"><i class="fas fa-link"></i>Nhân viên</a></li>
+					<li><a href="../../Doanhthu/index.html"><i class="fas fa-stream"></i>Doanh thu</a></li>
+					<li><a href="../../dban/dbchinh.html"><i class="fas fa-calendar-week"></i>Order</a></li>
+					<li><a href="../../nguyên liệu/nguyenlieu.html"><i class="far fa-question-circle"></i>Nguyên liệu</a></li>
+					<li><a href="../../event/demo.html"><i class="fas fa-sliders-h"></i>Events</a></li>
+					<li><a href="../../Thuc Don/index.html"><i class="far fa-envelope"></i>Menu Food</a></li>
+				</ul>
+	</div></div>
+	<div class="bophan">
+				<ul>
+				<li><h1>Các bộ phận</h1></li>
+				<li><a href="../../nhanluc/giamdoc/giamdoc.html">Ban Giám Đốc</a></li>
+				<li><a href="../../nhanluc/bep/giamdoc.html">Bộ Phận Bếp</a></li>
+				<li><a href="../../nhanluc/ketoan/giamdoc.html">Bộ Phận Kế Toán/Thu Ngân</a></li>
+				<li><a href="../../nhanluc/quanli/giamdoc.html">Bộ Phận Quản Lí</a></li>
+			</ul>
+		
+		<form action="#">
+			<table cellpadding="1">
+				<tr>
+					<th><label for="ten">Họ Và Tên</label></th>
+					<th><input type="text" id="ten" style="margin-left: 3px;"></th>
+				</tr>
+				<tr>
+					<th><label for="Ma">Mã Nhân Viên</label></th>
+					<th><input type="text" id="Ma" style="margin-left: 3px;"></th>
+				</tr>
+				<tr>
+					<th><label for="part">Bộ Phận</label></th>
+					<th><select name="bophan" id="part" style="margin-left: 3px;">
+					    <optgroup label="Ban Giám Đốc">
+					    	<option value="1">Giám Đốc</option>
+					    	<option value="1">Phó Giám Đốc</option>
+					    </optgroup>
+					    <optgroup label="Bộ Phận Bếp">
+					    	<option value="3">Bếp trưởng</option>
+					    </optgroup>
+					    <optgroup label="Bộ Phận quản lí">
+					    	<option value="4">Quản Lí</option>
+					    </optgroup>
+					</select>
+					</th>
+
+				</tr>
+				<tr>
+					<th colspan="2"><button style=" margin:10px 40px; width: 70%;">Search</button></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+	<div class="col-9 col-9s-12 bang">
+		<div class="row banner">
+		<div class="col-4 col-s-12" style="background-color: #bbbfca;"><h2 style="padding: 8px;margin-left: 20px;"><a href="../../nhanvien/chinh/index.html">Danh Sách Nhân Viên</a></h2></div>
+		<div class="col-6 col-s-12" style="background-color: #bbbfca;"><h2 style="padding: 8px;"><i class="fas fa-caret-right"></i>
+		   Thông tin nhân viên </h2></div>
+		</div>
+		
+		<div class="img">
+			<div class="anh">
+			<img src="images.png" alt="" style="width: 70%;height: 70%">
+			<h2 >Nguyễn Văn Hải</h2>
+			<h4 style="margin-top: 10px;">Chức vụ: Phó Giám Đốc <i class="fas fa-edit"></i></h4>
+			</div>
+
+			<div class="qr">
+				<img src="qr.png" alt=""style="width: 97%;
+				height: 97%;">
+				
+			</div>
+		</div>
+		<div class="info">
+			<div class="tren">
+				<h3>Thông tin cá nhân</h3>
+				<hr>
+				<div class="phan1">
+					<table cellspacing="2">
+						<tr>
+							<th>Tên nhân viên</th>
+							<td>Nguyễn Văn Hải</td>
+						</tr>
+						<tr>
+							<th>Mã Nhân viên</th>
+							<td>100</td>
+
+						</tr>
+						<tr>
+							<th>Giới tính</th>
+							<td>Nam</td>
+						</tr>
+						<tr>
+							<th>Ngày sinh</th>
+							<td>30/10/2001</td>
+						</tr></table>
+					
+				</div>
+				<div class="phan2">
+					<table>
+						<tr>
+							<th>Số CMND/CCCD</th>
+							<td>0362301293202</td>
+						</tr>
+						<tr>
+							<th>Ngày cấp</th>
+							<td>2018</td>
+
+						</tr>
+						<tr>
+							<th>Trạng thái</th>
+							<td>Đang làm việc</td>
+						</tr>
+						</table>
+					
+				</div>
+
+			</div>
+			<div class="duoi">
+				<h3>Thông tin cơ bản</h3>
+				<hr>
+				<div class="phan1">
+					<table >
+						<tr>
+							<th>Quê quán</th>
+							<td>Hải hậu</td>
+						</tr>
+						<tr>
+							<th>Dân tộc</th>
+							<td>Kinh</td>
+
+						</tr>
+						<tr>
+							<th>Tôn Giáo</th>
+							<td>Không</td>
+						</tr>
+						<tr>
+							<th>Quốc tịch</th>
+							<td>Việt Nam</td>
+						</tr></table>
+					
+				</div>
+				<div class="phan2">
+					<table>
+						<tr>
+							<th>Nơi sinh</th>
+							<td>hải hậu</td>
+						</tr>
+						<tr>
+							<th>Trình độ học vấn</th>
+							<td>Đại học</td>
+
+						</tr>
+						<tr>
+							<th>Trình độ văn hóa </th>
+							<td>12/12</td>
+						</tr>
+						<tr>
+							<th>Hôn Nhân</th>
+							<td>Độc thân</td>
+						</tr></table>
+					
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>

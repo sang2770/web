@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Regular Form</title>
+	<!-- <link rel="stylesheet" href="css.css"> -->
+  <style>
+    .page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+/*display: flex;*/
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper > * {
+  padding: 25px;
+}
+
+td {
+  padding: 5px;
+}
+
+td:first-child {
+  text-align: right;
+}
+td:nth-child(2) {
+  width: 350px;
+}
+
+td:nth-child(3) {
+  width: 25px;
+}
+
+td > input[type='text'],
+td > input[type='password'],
+td > select,
+td > textarea {
+  width: 100%;
+  padding-left: 3px;
+}
+
+td > input[type='text'],
+td > input[type='password'],
+td > select {
+  height: 22px;
+}
+
+  </style>
+	<script>
+		const ck_usr = /^[A-Za-z_][\w-@]{4,11}$/
+		const ck_pass = /[A-Za-z0-9!@#$%^&*()_ ]{7,12}$/
+		const ck_name = /[A-Za-z-]$/
+		const ck_zip = /[\d]{5}$/
+		const ck_email = /^[\w][\w-]+(?:\.[\w-]+)*@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
+
+let [usr, pass150101, name, zip, email] = Array(5).fill(false)
+let accept = false
+
+const checkRes = document.getElementsByClassName('checkRes')
+
+function checkAll() {
+  accept = true
+
+  if (!checkUsr()) accept = false
+  if (!checkPass()) accept = false
+  if (!checkName()) accept = false
+  if (!checkZip()) accept = false
+  if (!checkEmail()) accept = false
+
+  showCheck()
+  setTimeout(() => {
+    accept ? showAccept() : showDeny()
+  }, 200)
+}
+
+function checkUsr() {
+  if (ck_usr.test(txt_usr.value)) {
+    usr = true
+    return true
+  }
+
+  usr = false
+  return false
+}
+
+function checkPass() {
+  if (ck_pass.test(pass.value)) {
+    pass150101 = true
+    return true
+  }
+
+  pass150101 = false
+  return false
+}
+
+function checkName() {
+  if (ck_name.test(txt_name.value)) {
+    name = true
+    return true
+  }
+
+  name = false
+  return false
+}
+
+function checkZip() {
+  if (ck_zip.test(txt_zip.value)) {
+    zip = true
+    return true
+  }
+
+  zip = false
+  return false
+}
+
+function checkEmail() {
+  if (ck_email.test(txt_email.value)) {
+    email = true
+    return true
+  }
+
+  email = false
+  return false
+}
+
+function showCheck() {
+  let accept = [usr, pass150101, name, zip, email]
+  for (let i = 0; i < 5; i++) {
+    if (accept[i]) {
+      checkRes[i].innerHTML = '<i class="fas fa-check" style="color: #42BC76FF"></i>'
+    }
+    else {
+      checkRes[i].innerHTML = '<i class="fas fa-times" style="color: #F00EA7FF"></i>'
+    }
+  }
+}
+
+function showAccept() {
+  alert("Logged in successfully!")
+}
+
+function showDeny() {
+  alert("Please check again")
+}
+	</script>
+</head>
+<body>
+	<div class="page-wrapper">
+    <h1 style="padding-left: 150px ">Registration Form</h1>
+    <form>
+      <table>
+        <tr>
+          <td><label for="txt_usr">User ID:</label></td>
+          <td><input type="text" name="txt_usr" id="txt_usr" required=""></td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+           <td><label for="pass">Password:</label></td>
+          <td><input type="password" name="pass" id="pass" required=""></td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+          <td><label for="txt_name">Name:</label></td>
+          <td><input type="text" name="txt_name" id="txt_name" required=""></td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+          <td><label for="txt_addr">Address:</label></td>
+          <td><input type="text" name="txt_addr" id="txt_addr"></td>
+          <td><span class="checkRes"><i ></i></span></td>
+          <td>(optional)</td>
+        </tr>
+        <tr>
+          <td><label for="slt_country">Country:</label></td>
+          <td><select name="slt_country" id="slt_country" required="">
+                <option value="1" selected="">Vietnam</option>
+                <option value="2">Laos</option>
+                <option value="3">Cambodia</option>
+                <option value="4">Indonesia</option>
+                <option value="5">Thailand</option>
+                <option value="6">China</option>
+              </select>
+          </td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+          <td><label for="txt_zip">Zip Code:</label></td>
+          <td><input type="text" name="txt_zip" id="txt_zip" required=""></td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+          <td><label for="txt_email">Email:</label></td>
+          <td><input type="text" name="txt_email" id="txt_email" required=""></td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+          <td>Sex:</td>
+          <td>
+            <input type="radio" name="rad_gender" id="rad_male" checked="" required="">
+            <label for="rad_male">Male</label>
+            <input type="radio" name="rad_gender" id="rad_female">
+            <label for="rad_female">Female</label>
+          </td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+          <td>Language:</td>
+          <td>
+            <input type="radio" name="rad__languge" id="rad_english" checked="" required="">
+            <label for="rad_english">English</label>
+            <input type="radio" name="rad__languge" id="rad_non-english">
+            <label for="rad_non-english">Non English</label>
+          </td>
+          <td><span class="checkRes"><i ></i></span></td>
+        </tr>
+        <tr>
+           <td>About:</td>
+          <td><textarea name="" id="" rows="5"></textarea></td>
+          <td><span class="checkRes"><i ></i></span></td>
+          <td>(optional)</td>
+        </tr>
+      </table>
+    </form>
+    <button type="submit" onclick="checkAll()">Sign up</button>
+  </div>
+</body>
+</html>

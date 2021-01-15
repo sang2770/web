@@ -1,0 +1,41 @@
+body{
+	width: 1000px;
+	margin:0px auto;
+}
+header{
+     width: 1000px;
+     height: 100px;
+     background-color: pink;
+}
+nav{
+	  width: 1000px;
+     height: 100px;
+     background-color: green;
+
+}
+article{
+	width: 500px;
+	height: 500px;
+	background-color: brown;
+	float: left;
+}
+section{
+	 width: 500px;
+     height: 100px;
+     background-color: gray;
+
+}
+aside{
+	  width: 500px;
+     height: 500px;
+     background-color: pink;
+     float: left;
+
+}
+footer{
+	clear: left;
+	  width: 1000px;
+     height: 100px;
+     background-color:red;
+
+}

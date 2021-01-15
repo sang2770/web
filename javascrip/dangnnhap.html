@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+</head>
+<body>
+	<form action="">
+	<input type="text" id="name" pattern="[a-z]{1,15}" >
+	<input type="password" id="pass" >
+	<input type="submit" >
+	</form>
+	<!-- <div onmouseover="over(this)" onmouseout="out1(this)" style="background-color: #16a596;width: 100px; height: 30px; padding: 27px;">The boy is very handsome</div> -->
+	<script>
+		// function over(obj)
+		// {
+		// 	obj.innerHTML="Thank you";
+		// }
+		// function out1(obj)
+		// {
+		// 	obj.innerHTML="mouse went out";
+		// }
+		// function input()
+		// {
+		// 	document.getElementById("name").style.color="yellow";
+		// }
+		// function out()
+		// {
+		// 	document.getElementById("name").style.backgroundColor="white";
+		// }
+		// function chane()
+		// {
+		// 	document.getElementById("name").style.backgroundColor="blue";
+		// }
+		// function myi()
+		// {
+		// 	document.getElementById("pass").style.backgroundColor="red";
+		// }
+		// function my()
+		// {
+		// 	document.getElementById("pass").style.background="yellow";
+		// }
+		function nhap () {
+			let user=document.getElementById("name");
+			let pass=document.getElementById("pass");
+			if(user.value=="admin" && pass.value=="123")
+			{
+				alert("Đăng nhập thành công");
+				user.value="";
+				pass.value="";
+				confirm("chuyen huong");
+				chuyenhuong();
+			}
+			else if(user.value==""&& pass.value=="")
+			{
+				alert("Bạn chưa nhập j");
+			}
+			else
+			{
+				alert("Mk hoac tk sai.");
+				user.value="";
+				pass.value="";
+			}
+			
+
+			// body... 
+		}
+		function chuyenhuong()
+		{
+			location.assign("https://www.w3schools.com/jsref/met_loc_assign.asp");
+		}
+	</script>
+
+</body>
+</html>

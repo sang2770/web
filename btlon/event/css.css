@@ -1,0 +1,244 @@
+
+body{
+	font-family: 'Roboto',sans-serif;
+	
+	background-image: url("112.jpg");
+	background-size: cover;
+	background-position: center;*/
+	
+}
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+
+}
+
+.left{
+	height: 5500px;
+	/*width: 250px;*/
+	/*background-color:orange;*/
+	float: left;
+	font-size: 20px;
+	padding: 5px;
+}
+#sidebar{
+	/*position: fixed;*/
+	font-family: 'Baloo Chettan 2', cursive;
+	width: 100%;
+	height: 100%;
+	/*background: url(cde.jpg) fixed no-repeat;*/
+	transition: all .5s ease;
+}
+#sidebar header{
+	line-height: 65px;
+	font-size: 23px;
+	color:orange;
+	padding:10px 5px;
+	box-sizing: border-box;
+	transition: 0.4s;
+}
+#sidebar ul{
+	margin-left: -40px ;
+}
+#sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color:#fff;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: .4s;
+}
+.them{
+	margin-top: 20px;
+	width: 100%;
+	height: 40px;
+	/*background-color: orange;*/
+	margin-bottom: 10px;
+}
+.them button{
+	border-radius: 8px;
+	padding: 8px 10px;
+	float:right;
+	margin-right: 10px;
+}
+.them button:hover{
+	background-color:orange;
+}
+#sidebar ul li:hover a{
+	padding-left: 50px;
+	color: #fff;
+	background: orange;
+	text-decoration: none;
+}
+#sidebar ul a i{
+	margin-right: 16px;
+}
+
+*{
+	box-sizing:border-box;
+}
+
+[class*="col-"]
+{
+	float: left;
+
+}
+.row::after{
+	clear: both;
+	content: "";
+}
+/*smartphone*/
+[class *="col-"]{
+
+	width: 100%
+}
+/*tablet*/
+@media only screen and (min-width: 600px){
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 { width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+
+}
+/*desktop*/
+@media only screen and (min-width:768px )
+{
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+
+}
+.than1{
+	min-height: 620px;
+	background-color: #fafafa;
+	border-radius: 17px;
+}
+.menu{
+	height: 100%;
+}
+/* background-color: green; */
+
+
+/* .content{
+	height: 100%;
+	/*background-color: blue;
+} */
+ .banner{
+	height: 200px;
+	
+
+ }
+	/*background-color: gray;
+} 
+.text{
+	height: 500px;
+	/*background-color: red;*/
+
+.text1{
+	height: 200px;
+}
+.anh{
+	height: 100%;
+	border: 2px solid yellow;
+    border-radius : 20px 20px 20px 20px;
+    padding top: 20px;
+	/*background-color: #fafafa*/
+	
+}
+.chu{
+	margin-top: 10px;
+	height: 100%;
+	padding-left: 20px;
+
+	/*background-color: brown;*/
+}
+.chu h1{
+	width: 99%;
+	border-bottom: 1px black solid;
+	padding-bottom: 10px;
+}
+.chu p{
+	margin-top: 10px;
+}
+
+@-webkit-keyframes my {
+	 0% { color: #F8CD0A; } 
+	 50% { color: #fff;  } 
+	 100% { color: #F8CD0A;  } 
+ }
+ @-moz-keyframes my { 
+	 0% { color: #F8CD0A;  } 
+	 50% { color: #fff;  }
+	 100% { color: #F8CD0A;  } 
+ }
+ @-o-keyframes my { 
+	 0% { color: #F8CD0A; } 
+	 50% { color: #fff; } 
+	 100% { color: #F8CD0A;  } 
+ }
+ @keyframes my { 
+	 0% { color: #F8CD0A;  } 
+	 50% { color: #fff;  }
+	 100% { color: #F8CD0A;  } 
+ } 
+ .test {
+         background:;
+         font-size:24px;
+         font-weight:bold;
+	 -webkit-animation: my 700ms infinite;
+	 -moz-animation: my 700ms infinite; 
+	 -o-animation: my 700ms infinite; 
+	 animation: my 700ms infinite;
+@-webkit-keyframes my {
+	 0% { color: #F8CD0A; } 
+	 50% { color: #fff;  } 
+	 100% { color: #F8CD0A;  } 
+ }
+ @-moz-keyframes my { 
+	 0% { color: #F8CD0A;  } 
+	 50% { color: #fff;  }
+	 100% { color: #F8CD0A;  } 
+ }
+ @-o-keyframes my { 
+	 0% { color: #F8CD0A; } 
+	 50% { color: #fff; } 
+	 100% { color: #F8CD0A;  } 
+ }
+ @keyframes my { 
+	 0% { color: #F8CD0A;  } 
+	 50% { color: #fff;  }
+	 100% { color: #F8CD0A;  } 
+ } 
+ .test {
+     
+         font-size:24px;
+         font-weight:bold;
+	 -webkit-animation: my 700ms infinite;
+	 -moz-animation: my 700ms infinite; 
+	 -o-animation: my 700ms infinite; 
+	 animation: my 700ms infinite;
+}
+.bot{height:100px;
+ clear:both;}

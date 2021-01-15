@@ -1,0 +1,338 @@
+body{
+	font-family: 'Roboto',sans-serif;
+	background-image: url("../../bg.jpg");
+	
+}
+.search button{
+	border-radius: 8px;
+	background:transparent;
+	padding: 8px 24px;
+	border:2px solid white;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+} 
+.search button:hover{
+	cursor: pointer;
+	background-color: #333456;
+}
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.banner{
+	height: 50px;
+	margin:5px 0px;
+	background-color: #bbbfca;
+}
+.sidebar{
+	position: fixed;
+	left: -250px;
+	font-family: 'Baloo Chettan 2', cursive;
+	width: 250px;
+	height: 100%;
+	background: #042331;
+	transition: all .5s ease;
+}
+.sidebar header{
+	font-size: 22px;
+	color: white;
+	/*text-align: center;*/
+	line-height: 70px;
+	background: #063146;
+	user-select: none;
+}
+.sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color: white;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255,.1);
+	/*border-bottom: 1px solid black;*/
+	transition: .4s;
+}
+.sidebar ul li:hover a{
+	padding-left: 50px;
+	background-color: orange;
+}
+.sidebar ul a i{
+	margin-right: 16px;
+}
+#check{
+	display: none;
+}
+label #btn,label #cancel{
+	position: absolute;
+	cursor: pointer;
+	background: #042331;
+	border-radius: 3px;
+}
+label #btn{
+	left: 40px;
+	top: 18px;
+	font-size: 35px;
+	color: white;
+	padding: 6px 12px;
+	transition: all .5s;
+}
+label #cancel{
+	z-index: 1111;
+	left: -195px;
+	top: 17px;
+	font-size: 30px;
+	color: #0a5275;
+	padding: 4px 9px;
+	transition: all .5s;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~ label #cancel{
+	left: 195px;
+}
+#check:checked ~ section{
+	margin-left: 250px;
+}
+.menu{
+	/*background-color: opacity;*/
+	height: 80px;
+	/*width: 100%;*/
+	/*border:1px gray solid;*/
+}
+
+
+.ad{
+	/*float: left;*/
+	width: 100%;
+	height: 100px;
+	/*font-size: 20px;*/
+	text-align: center;
+	border-bottom:1px black solid;
+}
+*{
+	box-sizing:border-box;
+}
+
+[class*="col-"]
+{
+	float: left;
+
+}
+.row::after{
+	clear: both;
+	content: "";
+}
+/*smartphone*/
+[class *="col-"]{
+
+	width: 100%
+}
+/*tablet*/
+@media only screen and (min-width: 600px){
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 { width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+
+}
+/*desktop*/
+@media only screen and (min-width:768px )
+{
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 24%}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+
+}
+.than{
+	/*position: fixed;*/
+	clear: both;
+	/*background-color: gray;*/
+	min-height: 500px;
+	width:100%;
+	margin:10px auto;
+}
+
+.nhanvien{
+	clear:both;
+	margin-top:10px;
+}
+.search{
+	/*background-color: #0f3057;*/
+	min-height: 500px;
+	margin:0px 5px;
+	font-size: 20px;
+	font-family: 'Baloo Chettan 2', cursive;
+}
+.bang{
+	background-image: linear-gradient(to right,#fbf7f0, #e8ffff);
+	color:black;
+	min-height: 700px;
+	border:1px white solid;
+}
+/*.chucvu p{
+	color:black;
+}*/
+.search .bophan ul{
+	list-style: none;
+	width: 90%;
+	min-height: 200px;
+	/*background-color: gray;*/
+	margin:5px auto;
+}
+.search .bophan ul li{
+	/*text-align: center;*/
+	min-height: 30px;
+	color: white;
+	/*line-height: 10px;*/
+	display: block;
+	/*margin-bottom: 10px;*/
+	padding-top: 20px;
+	padding-left: 20px;
+	border-bottom: 1px white solid;
+	padding-bottom: 10px;
+
+}
+.search .bophan ul li a{
+	text-decoration: none;
+	color: white;
+}
+.search form{
+	width: 90%;
+	min-height: 200px;
+	margin:10px;
+}
+.search table{
+	width: 100%;
+
+	text-align: left;
+	color: white;
+}
+.search li:hover{
+	background-color: gray;
+}
+.search form{
+	width: 90%;
+	min-height:100px;
+	border:1px white solid;
+	margin:10px auto;
+}
+.nhanvien .bophan li{
+	transition-duration: 1s;
+}
+.nhanvien  .bophan li:hover{
+	padding-left: 10px;
+
+}
+.bang .img{
+	width: 30%;
+	min-height: 200px;
+	background-color: white;
+	float: left;
+	margin: 10px;
+}
+.bang .info{
+	margin-top: 30px;
+	width: 65%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-left: 10px;
+	padding: 20px;
+	/*background-color: */
+	margin:40px 10px;	
+}
+.anh{
+	width: 100%;
+	min-height: 250px;
+	/*background-color: pink;*/
+	/*position: relative;*/
+	text-align: center;
+	/*margin-left: 10px;*/
+
+
+}
+.anh img{
+
+border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+}
+
+.qr{
+	width: 100%;
+	min-height: 200px;
+	margin:3px;
+	/*border:1px solid;*/
+}
+
+.tren{
+	width: 100%;
+	height: 50%;
+	/*background-color: green;*/
+	/*float: left;*/
+	padding: 10px;
+}
+.duoi{
+	width: 100%;
+	height: 50%;
+	/*background-color: blue;*/
+	/*float: left;*/
+
+}
+.phan1{
+	width: 50%;
+	height: 100%;
+	/*background-color: red;*/
+	float: left;
+	margin-top:5px;
+}
+.phan2{
+	width: 50%;
+	height: 100%;
+	/*background-color: red;*/
+	float: left;
+	margin-top:5px;
+}
+.info th{
+	text-align: left;
+}
+.info td{
+	border: 1px solid;
+	width: 170px;
+	background-color: #bdbfbe;
+	padding: 5px;
+
+	
+}
+.info h3{
+	padding-bottom: 5px;
+}
+

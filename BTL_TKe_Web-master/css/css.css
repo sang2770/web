@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600&display=swap');
+
+h1, h2, h3 {
+	font-family: Dancing Script !important;
+	color: #f2fff3;
+}
+.carousel-caption{
+	position: absolute;
+	top: 60%;
+}
+
+img {
+	border-radius: 5px;
+}
+
+.foot {
+	background: #f8f9fa !important
+}

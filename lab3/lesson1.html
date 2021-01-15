@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Table_Form</title>
+</head>
+<body>
+	<!-- tao bang -->
+	<table border="1" align="center" cellpadding="10" cellspacing="10">
+		<tr>
+			<th colspan="2">MENU</th>
+			<!-- <th>Caculrator</th> -->
+			<th >Fat</th>
+		</tr>
+		<tr>
+			<td rowspan="3">chicken noodle soup</td>
+			<td>120</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<!-- <td>pasta</td> -->
+			<td>400</td>
+			<td>26</td>
+		</tr>
+	</table>
+	<!-- tao vung chon -->
+	<form method="Post" action="user.txt">
+		<label for="un">user name:</label>
+		<input type="text" name="username" id="un" ><br>
+		<label for="ul">Description:</label>
+		 <textarea cols="30" rows="5" id="ul"></textarea><br>
+		Password:<input type="Password" name="Password"><br>
+		Gender:
+		    <input type="radio" name="gen" value="1">Male
+		    <input type="radio" name="gen" value="2">Female
+		    <br>
+		Hobies: <input type="checkbox">Music
+		   <input type="checkbox"  value="sport"checked>Sport
+		   <input type="checkbox" value="game">Game
+		   <br>
+		  <label for="country">country:</label>
+		<select name="country" id="country">
+		 	<optgroup label="Vietnam">
+		 	<option value="1">Hanoi</option>
+		 	<option value="2">Saigon</option>
+		 </optgroup>
+		 <optgroup label="Phap">
+		 	<option value="3">London</option>
+		 	<option value="4">Pari</option>
+		 </optgroup>
+		 </select>
+<br>
+    image: <input type="file">
+    <br>
+    <!-- <input type="hidden" name="secret" value="hidden"> -->
+		<input type="submit" value="submit" >
+		<input type="reset" value="reset">
+<br>
+<!-- tao ngay thang -->
+Dob:<input type="date">
+<br>
+<input type="number"name="age">
+<br>
+
+<input type="time">
+<input type="datetime=">
+	</form>
+
+</body>
+</html>
