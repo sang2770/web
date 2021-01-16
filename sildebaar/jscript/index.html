@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js.js"></script>
+</head>
+<body>
+  
+
+<div class="myapp">
+    <div class="wrapper-menu">
+      <div class="item">
+        <img src="https://vinmec-prod.s3.amazonaws.com/images/20200303_135340_553782_3-nhuoc-diem-tiem-n.max-1800x1800.jpg" alt=""/>
+        <div class="text-box">
+          <h4 class="name">Cafe đen</h4>
+          <p class="price">30.000 vnd</p>
+        </div>
+        <div class="act-box">
+          <button class="add-cart" onClick="remove_item('amount-1', 'Cafe đen', 30000)">Huỷ</button>
+          <button class="add-cart" onClick="add_cart('amount-1', 'Cafe đen', 30000)">Lựa chọn</button>
+        </div>
+      </div>
+  
+      <div class="item">
+        <img src="https://lh3.googleusercontent.com/proxy/L9Ns-ButhQygy9pZPJIrF0KrofiQ4j0i1J67Tx5VOEKOsLqRRz0hDkhYSB29Zm7A3RhfEaL9Sxda-46Yqsu0hnv_4AXZQ2BkRm0i4YPvbqUspdxvHk4" alt=""/>
+        <div class="text-box">
+          <h4 class="name">Cafe nâu</h4>
+          <p class="price">40.000 vnd</p>
+        </div>
+        <div class="act-box">
+          <button class="add-cart" onclick="remove_item('amount-2', 'Cafe nâu', 40000)">Huỷ</button>
+          <button class="add-cart" onclick="add_cart('amount-2', 'Cafe nâu', 40000)">Lựa chọn</button>
+        </div>
+      </div>
+  
+      <div class="item">
+        <img src="https://vcdn-suckhoe.vnecdn.net/2020/01/25/selenium-1-1920x1080-157996633-1311-6144-1579967859.jpg" alt=""/>
+        <div class="text-box">
+          <h4 class="name">Huớng dương</h4>
+          <p class="price">15.000 vnd</p>
+        </div>
+        <div class="act-box">
+          <button class="add-cart" onclick="remove_item('amount-3', 'Huớng dương', 15000)">Huỷ</button>
+          <button class="add-cart" onclick="add_cart('amount-3', 'Huớng dương', 15000)">Lựa chọn</button>
+        </div>
+      </div>
+  
+      <div class="item">
+        <img src="https://heomishop.com/wp-content/uploads/2016/06/Kh%C3%B4-g%C3%A0-Web-e1564601905667.jpg" alt=""/>
+        <div class="text-box">
+          <h4 class="name">Khô gà cay</h4>
+          <p class="price">60.000 vnd</p>
+        </div>
+        <div class="act-box">
+          <button class="add-cart" onclick="remove_item('amount-4', 'Khô gà cay', 60000)">Huỷ</button>
+          <button class="add-cart" onclick="add_cart('amount-4', 'Khô gà cay', 60000)">Lựa chọn</button>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <div class="wrapper-order">
+      <h2>Sản phẩm đã chọn<h2>
+      <br>  
+      <div id="list-order"></div>
+      <br>
+      
+      <div class="calc-box">
+        <p class="elm-calc">
+          Tổng:
+          <b id="total">0</b>
+          <small>vnd</small>
+        </p>
+        <p class="elm-calc">
+          VAT (10%): 
+          <b id="tax">0</b>
+          <small>vnd</small>
+        </p>
+        <p class="elm-calc">
+          Thanh toán: 
+          <b id="payment">0</b>
+          <small>vnd</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html> 
+  
+  
+  
