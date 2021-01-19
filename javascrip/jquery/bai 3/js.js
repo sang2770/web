@@ -18,8 +18,12 @@ $(function() {
         event.preventDefault();
         $('html,body').animate({scrollTop:$(".chapter4").offset().top}, 1400);
     });
-    $('.menu ul li:nth-child(5) a').on('click', function (event) {
-        event.preventDefault();
+    // $('.menu ul li:nth-child(5) a').on('click', function (event) {
+    //     event.preventDefault();
+    //     $('html,body').animate({scrollTop:0}, 1400);
+    // });
+    $('.menu ul li:nth-child(5) a').click(function (e) { 
+        e.preventDefault();
         $('html,body').animate({scrollTop:0}, 1400);
     });
 });
