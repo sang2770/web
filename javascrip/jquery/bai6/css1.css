@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:crimson;
+    color: darkslategrey;
+
+}
+.tieude{
+    background-color: darkturquoise;
+    text-align: center;
+    padding: 10px;
+    font-size: 33px;
+}
+.content{
+    width: 1000px;
+    height: 200px;
+    padding-top:30px;
+    color: white;
+    margin: 10px auto;
+}
+.trai{
+    width: 45%;
+    height: 200px;
+    float: left;
+    margin-right: 5%;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.phai{
+    width: 45%;
+    height: 200px;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nut{
+    background-color: whitesmoke;
+    text-align: center;
+    padding:20px;
+    border:1px solid gray;
+    color: black;
+    width: 100px;
+    cursor:pointer;
+}
+.noidung{
+    width: 40%;
+    height: 30%;
+    background-color: red;
+    color: whitesmoke;
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    top:25%;
+    z-index: 2;
+    left: 28%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    transform:scale(0.3);
+
+}
+.noidung h3{
+    text-align: center;
+    background-color: gray;
+    padding:10px;
+}
+.text{
+    padding:10px;
+}
+.nutdong{
+    width: 100px;
+    text-align: center;
+    background-color: aqua;
+    margin: auto;
+    padding:10px;
+    cursor: pointer;
+    color: black;
+   
+}
+.xam{
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    z-index: 1;
+    background-color: gray;
+    opacity: 0.5;
+    top:0;
+    left:0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    transform:scale(0.3);
+}
+.noidung.new{
+    visibility: visible;
+    opacity: 1;
+    transform:scale(1);
+}
+.xam.new1{
+    visibility: visible;
+    opacity: 0.5;
+    transform:scale(1);
+}
+
+
