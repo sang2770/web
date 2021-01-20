@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.phantren{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+.anhnen{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    background-image: url(2.jpg);
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    background-size: cover;
+    animation: hienra 0.5s forwards ;
+    opacity: 0;
+}
+@-webkit-keyframes hienra{
+    0%{ 
+        opacity: 0;
+    }
+    100%{ opacity:1;}
+}
+
+.gau{
+    position: absolute;
+    z-index: 2;
+    /* top: 100px; */
+    right: 20%;
+    transition: 0.4s;
+    animation: duoilen 1s forwards;
+    bottom: -500px;
+    animation-delay: 1s;
+}
+@-webkit-keyframes duoilen{
+    0%{
+        bottom: -500px;
+    }
+    100%{
+        bottom:20%;
+    }
+}
+.chuto{
+    position: absolute;
+    z-index: 3;
+    top: 40%;
+    left: 40%;
+    font-size: 30px;
+    color: white;
+    animation: divao 1s forwards;
+    animation-delay: 1.7s;
+    transform: translateX(-500px);
+    opacity: 0;
+}
+.chunho{
+    position: absolute;
+    z-index: 4;
+    top: 55%;
+    left: 45%;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    animation: divao 1s forwards;
+    animation-delay: 1.5s;
+    transform: translateX(-500px);
+    opacity: 0;
+}
+@-webkit-keyframes divao{
+    0%{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(45%);
+    }
+}
+.nut{
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    z-index: 4;
+    left: 60%;
+    color:black;
+    background-color: turquoise;
+    border: 1px solid;
+    border-radius: 14px;
+    text-align: center;
+    padding:10px;
+    cursor: pointer;
+    animation: dilen 1s forwards;
+    animation-delay: 1.9s;
+    opacity: 0;
+    bottom: -300px;
+}
+@-webkit-keyframes dilen{
+    0%{
+        bottom: 0%;
+        opacity: 0;
+    }
+    100%{
+        bottom:20%;
+        opacity: 1;
+    }
+}

@@ -11,6 +11,7 @@ các hàm đã học:
 .animate({scrollTop:}, tocdo, "hieuung");
 lưu ý:
    chọn body ->  html, body
+
 jquery+css3:
 tranform:rotate(180deg)  //quay   +transition: 0.5s
 	tranforms:rotateX()  //quay theo truc x    +perspective: 600px; //o the cha tạo hiệu ứng
@@ -31,4 +32,9 @@ transition-timing-function: ease;   nhanh-chậm  //gia tốc
  			   linear:chuyển động đều
 
 				...
-
+animation:
++ ten 0.4s fowards
+   . ten:ten hieu ung   @-webkit-keyfarme tenhieuung (0%{opacity:..} 100%{....});
+   . 0.4s: thoi gian chay
+   .fowards: chay xong dung yen
++ animation-delay:
