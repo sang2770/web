@@ -6,23 +6,23 @@
 img.anhdemo{
     width: 400px;
     /* xoay */
-    /* transform: rotateX(180deg); */
-    /* transform-origin: 0% 90%; */
+    transform: rotateY(30deg);
+    transform-origin: 0% 50%;
     transition: 2.4s;
 
     /* zoom */
     /* transform:scale(2); */
     /* dichuyen */
-    transform:translateX(100px) translateY(100px);
+    /* transform:translateX(100px) translateY(100px); */
     /* transform:translatey(100px); */
 
 }
-.noidung:hover .anhdemo{
+/* .noidung:hover .anhdemo{
     transition-delay: 2s;
     transform:scale(2);
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
     ;
-}
+} */
 .noidung{
     background-color:lightseagreen;
     padding: 60px;
