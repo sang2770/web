@@ -9,6 +9,10 @@ các hàm đã học:
 .removeClass('')
         =.toggleClass('')
 .animate({scrollTop:}, tocdo, "hieuung");
+
+//ham tinh toan vi tri
+//.offset().top
+//this.index()+1 //vi tri phan tu 
 lưu ý:
    chọn body ->  html, body
 

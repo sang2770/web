@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a=[2,5,3,7,3];
+        // document.write(a);
+        // class sinhvien{
+        //     constructor(ten, tuoi , lop) {
+        //         this.ten=ten;
+        //         this.tuoi=tuoi;
+        //         this.lop=lop;
+        //     }
+        // }
+        
+        // let a1=new sinhvien('sang', 18, 'CNTT1');
+        // let a2=new sinhvien('mai', 18, 'CNTT1');
+        // let a3=new sinhvien('nam', 18, 'CNTT2');
+        // let a4=new sinhvien('phuc', 18, 'CNTT3');
+        // let b=[a1,a2,a3,a4];
+        // document.write(b[0].ten);
+        // đối tượng
+        let giaovien={
+            ten:"",
+            tuoi:'',
+            gioitinh:'',
+            settuoi:function(tuoi)
+            {
+                this.tuoi=tuoi;
+            }
+        }
+        giaovien.settuoi(18);
+        console.log(giaovien.tuoi);
+
+        // cach 2
+        function giangvien(ten, tuoi, gioitinh)
+        {
+            this.ten=ten;
+            this.tuoi=tuoi;
+            this.gioitinh=gioitinh;
+            this.in=function()
+            {
+                document.write(this.ten+" "+this.tuoi+" "+this.gioitinh);
+            }
+        }
+        let ob=new giangvien("sang", 18, "Nam");
+        document.write(ob.ten);
+        ob.in();
+
+    </script>
+</body>
+</html>
