@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" id="formmy">
+        <input type="submit" value="Submit">
+    </form>
+    <input type="text" value="20" init-value="20" onchange="validate(this)">
+    <script>
+        function validate(ob)
+        {
+            let value=parseInt(ob.value);
+            if(value<0)
+            {
+                let init_value=ob.getAttribute("init-value");
+                ob.value=init_value;
+            }
+            else
+            {
+                ob.setAttribute('init-value', value);
+            }
+        }
+        //sự kiện Submit Form 
+        document.getElementById("formmy").addEventListener("submit", function(){
+            alert("Form validated");
+        });
+    </script>
+</body>
+</html>

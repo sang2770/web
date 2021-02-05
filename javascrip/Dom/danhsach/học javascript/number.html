@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // khóa typeof kiểm tra kiểu dữ liệu
+        // tất cả só đều là kiểu number
+        let a=12;
+        let b=11.2;
+        let c=1e9-7;
+        document.write(typeof a+" "+typeof b);
+        // chuyen numer sang String
+        document.write(a.toString());
+        // kieu infinity chi vượt quá gtri luauw trữ
+        // hàm chuyển đồi sang kiểu number
+        let s="100";
+        document.write(Number(s));
+        document.write(Number(true));
+        // Hàm parseInt() lọc số nguyên ở đầu
+        let s1="123sang";
+        console.log(parseInt(s1));
+        // Hàm parseFloat lọc số thực ở đầu
+        let s2="1.2 saqng";
+        console.log(parseFloat(s2));
+        // hàm làm tròn số sau dấu chấm
+        b.toFixed(1);
+        console.log(b);
+    </script>
+</body>
+</html>

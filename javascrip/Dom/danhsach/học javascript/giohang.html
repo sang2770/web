@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        h1{
+            font-size: 20px;
+            height: 30px;
+        }
+        h2{
+            width: 100px;
+            float: left;
+            margin: 5px;
+            padding: 5px;
+            font-size: 15px;
+        }
+        #menu{
+            width: 500px;
+            float: left;
+            min-height: 500px;
+            background-color: aqua;
+            text-align: center;
+        }
+        #donhang{
+            width: 500px;
+            float: left;
+            min-height: 300px;
+            background-color: cadetblue;
+        }
+        #ten, #soluong{
+            width: 100px;
+            float: left;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="menu">
+
+    </div>
+    <div id="donhang">
+        Danh sách đơn mua:
+        <div id="danhsach">
+        <div id="ten"></div>
+        <div id="soluong"></div>
+        </div>
+        Tổng tiền:
+        <div id="tong">0</div>
+    </div>
+    <button onclick="hien()">hiện</button>
+    <script>
+        
+        class sanpham{
+            constructor(ten, gia, soluong)
+            {
+                this.ten=ten;
+                this.gia=gia;
+                this.soluong=soluong;
+            }
+        }
+        
+        
+        let sp1=new sanpham("Cà phê",19000,0);
+        let sp2=new sanpham("Ca cao",17000,0);
+        let sp3=new sanpham("Trà sữa",18000,0);
+        let sp4=new sanpham("Trà chanh",20000,0);
+        let sp5=new sanpham("Hướng dương",22000,0);
+        let sp6=new sanpham("Nước Cam",26000,0);
+        let a=[sp1, sp2, sp3, sp4, sp5, sp6];
+        let tg=document.createElement("h1");
+        for(let i=0;i<a.length;i++)
+        {
+            tg.innerHTML+="<h2>"+a[i].ten+"<br>"+a[i].gia+
+                        "<button onclick='add("+i+")'>Mua</button>"+"</h2>";
+        }
+        document.getElementById("menu").appendChild(tg);
+        function add(i)
+        {
+            let leng=document.querySelectorAll("#ten h1").length;
+            a[i].soluong++;
+            if(leng==0)
+            {
+                
+                let sum=document.getElementById("tong");
+                sum.innerText= Number(sum.innerText)+a[i].gia;
+                let don=document.getElementById("ten");
+                don.innerHTML=don.innerHTML+"<h1>"+a[i].ten+"</h1>"+"<br>";
+                document.getElementById("soluong").innerHTML=document.getElementById("soluong").innerHTML+"<h1>"+a[i].soluong+"</h1>"+"<br>";
+            }
+            else{
+                let dem=0;
+                for(let j=0;j<leng;j++)
+                {
+                    let kt=document.querySelectorAll("#ten h1")[j].innerText;
+                    
+                    console.log(typeof dem);
+                    if(kt==a[i].ten)
+                    {
+                        console.log(a[i].soluong);
+                        document.querySelectorAll("#soluong h1")[j].innerHTML=a[i].soluong; 
+                        dem++;
+                    }
+                    
+                }
+                if(dem==0)
+                    {
+                        let sum=document.getElementById("tong");
+                        sum.innerText= Number(sum.innerText)+a[i].gia;
+                        let don=document.getElementById("ten");
+                        don.innerHTML=don.innerHTML+"<h1>"+a[i].ten+"</h1>"+"<br>";
+                        document.getElementById("soluong").innerHTML=document.getElementById("soluong").innerHTML+"<h1>"+a[i].soluong+"</h1>"+"<br>"; 
+                    }
+            }
+        }
+
+        
+        function hien()
+        {
+            alert("hien");
+        }
+        
+    </script>
+        
+       
+</body>
+</html>

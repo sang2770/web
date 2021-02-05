@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="start()">
+    <div id="time">
+    </div>
+    <script>
+    //hàm xử lí thời gian
+        //khởi tạo   (nam, tháng, ngày, giờ, phút, giây,..)
+            let ob=new Date(2021,2,2);
+            console.log(ob);
+        // định dạng ngày giờ
+        //ISO
+            let ISO=new Date("2020-02-02");
+            console.log(ISO);
+        //Long
+            let Long=new Date("Feb 2021 02");
+            console.log(Long);
+        //Short
+            let Short=new Date("02/04/2021");  /// tháng ngày năm
+            console.log(Short);
+        //Các hàm xử lí
+            document.write(Short.getDay()+1+" "); // ngày trong tuần(thư)
+            document.write(Short.getDate()+" "); // ngày 
+            document.write(Short.getFullYear()+" "); // năm
+            document.write(Short.getMonth()+1+" "); // tháng 
+            // /getDate() lấy ngày (1 - 31)
+            // getDay() lấy ngày trong tuần (0-6)
+            // getFullYear() lấy năm đầy đủ (YYYY)
+            // getYear() lấy năm 2 số cuối (YY)
+            // getHours() lấy số giờ (0 - 23)
+            // getMiliSeconds() lấy số mili giây (0 - 999)
+            // getMinutes() lấy số phút (0 - 59)
+            // getMonth() lấy tháng (0 - 11)
+            // getSeconds() lấy số giây (0 - 59)
+            // getTime() thời gian đã được convert sang dạng miliseconds.
+        // hàm SetDate()
+            let date= new Date();
+            // thiết lập ngày
+            date.setDate(4);
+            date.setFullYear(2021);
+            date.setMonth(1);
+            console.log(date);
+        // TẠO ĐỒNG HỒ ONLINE
+        function start()
+        {
+            let today= new Date();
+            let h=today.getHours();
+            let m=today.getMinutes();
+            let s=today.getSeconds();
+
+            m=check(m);
+            s=check(s);
+            document.getElementById("time").innerHTML=h+":"+m+":"+s;
+            let t=setTimeout(function(){
+                start();
+            }, 500);
+
+
+
+        }
+        function check(i)
+        {
+            if(i<10)
+            {
+                i="0"+i;
+            }
+            return i;
+        }
+    </script>
+
+</body>
+</html>

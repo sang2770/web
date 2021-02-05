@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- khai báo mảng -->
+    <script>
+        let a=new Array(1,2,3);
+        let b=[1,2,5];
+        document.write(a+" "+b);
+        // truy xaut phan tu 
+        document.write(a[0]);
+        console.log(a);
+        //ham xu li mang
+        //aray.valueOf()
+            document.write("-"+a.valueOf());
+        //them phần tưt vào cuối mmang
+            a.push(12);
+            document.write("-"+a);
+        // them ptu vao dau tien cua mang
+            a.unshift(15);
+            document.write("Sau khi xoa :"+a);
+        // them phan tu vao vi tri xac dinhg
+            a.splice(1,0,19,234);   // vi tri them/so phan tu xoa đi/ các phần tưt thêm vào
+        // xoa phan tu cuoi cung trong mnag
+            a.pop();
+            document.write("Sau khi xoa :"+a);
+        // xóa phần tử đầu tiên của mảng
+            a.shift();
+            document.write("Sau khi xoa :"+a);
+        // sắp xếp mang theo tu tu chu cai tang dan tính theo chu cái đầu tiên
+            a.sort();
+            document.write("Sau khi sap xep :"+a);
+        // dao nguoc day
+            a.reverse();
+            document.write("Sau khi  dao nguoc:"+a);
+        // ham gộp mảng
+        let c=a.concat(b);
+        document.write("Sau khi gop :"+c);
+        // ham lay mot so phan tu
+            let d=c.slice(2,4); // vitribdau/ vitri ketthuc
+            document.write("Sau khi lấy :"+d);
+    </script>
+</body>
+</html>
