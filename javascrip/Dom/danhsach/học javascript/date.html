@@ -48,27 +48,20 @@
         // TẠO ĐỒNG HỒ ONLINE
         function start()
         {
-            let today= new Date();
-            let h=today.getHours();
-            let m=today.getMinutes();
-            let s=today.getSeconds();
-
+            let a=new Date();
+            let h=a.getHours(), m=a.getMinutes(), s=a.getSeconds();
+            h=check(h);
             m=check(m);
             s=check(s);
             document.getElementById("time").innerHTML=h+":"+m+":"+s;
             let t=setTimeout(function(){
                 start();
             }, 500);
-
-
-
         }
         function check(i)
         {
             if(i<10)
-            {
-                i="0"+i;
-            }
+            i="0"+i;
             return i;
         }
     </script>

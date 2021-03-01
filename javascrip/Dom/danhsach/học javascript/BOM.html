@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <script language="javascript">
+        // lấy kích thước trình duyệt
+            // let width=window.innerWidth|| document.body.clientWidth, height=window.innerHeight || document.body.clientHeight;
+            // alert(width+" "+height);
+        //hiện một khung cửa sổ tab mới
+        let tab=null;
+        function openW()
+        {
+            tab=window.open('https://freetuts.net', "tab", "width=500, height=500");
+            return false;
+        }
+        function closeW()
+        {
+            tab.close();
+            return false;
+        }
+        // Location web
+            // tải lại trang
+                function reset()
+                {
+                    window.location.reload();
+                }
+            // chuyển đến trang web 
+                function Go()
+                {
+                    window.location.assign("https://freetuts.net/bom-location-dieu-huong-va-xu-ly-url-trong-javascript-386.html");
+
+                }
+            // screeen
+            // lấy kích thuoc man hinh
+            document.write(screen.width+"<br>");
+            document.write(screen.height+"<br>");
+
+
+        
+    </script>
+    <button onclick="return openW()">Open</button>
+    <button onclick="return closeW()">Close</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="Go()">Goto</button>
+
+
+
+
+
+</body>
+</html>

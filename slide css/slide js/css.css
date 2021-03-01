@@ -1,0 +1,87 @@
+.container{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    transform: translateX(50%);
+}
+.slides{
+    width: 400%;
+    height: 100%;
+    /* display: flex; */
+    transition: 0.4s;
+    position: relative;
+}
+.slide{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    opacity: 0;
+    /* transition: 0.4s; */
+    visibility: hidden;
+}
+.s1{
+    visibility: visible;
+    opacity: 1;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.nut{
+    position: absolute;
+    font-size: 30px;
+    width: 700px;
+    height: 400px;
+    top:0;
+}
+#nuttrai{
+   position: absolute;
+   top:40%;
+   left: 10px;
+}
+#nutphai{
+    position: absolute;
+    top:40%;
+    left: 90%;
+}
+#nuttrai:hover ,#nutphai:hover{
+    color: aquamarine;
+}
+.mattrai{
+    animation: mattrai 1s forwards;
+}
+@-webkit-keyframes mattrai{
+    0%{
+        opacity: 1; 
+        transform: translateX(0%);
+    }
+    100%{
+        opacity: 0; 
+        transform: translateX(-100%);
+    }
+}
+.vaophai{
+    animation: vaophai 1s ;
+}
+@-webkit-keyframes vaophai{
+    0%{
+        opacity: 0; visibility: hidden;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1; visibility: visible;
+        transform: translateX(0%);
+    }
+}
+.test{
+    /* overflow: hidden; */
+    width: 500px;
+    height: 400px;
+    
+}
+.mo{
+    animation: vaophai 2s forwards;
+}
+.mo1{
+    animation:mattrai 2s forwards;
+}

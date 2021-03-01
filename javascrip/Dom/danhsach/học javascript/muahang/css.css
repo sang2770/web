@@ -1,0 +1,54 @@
+h1{
+    text-align: center;
+    height:50px;
+}
+img{
+    width: 50px;
+    height: 90px;
+    border-radius: 80%;
+}
+.sanpham{
+    width: 58%;
+    float: left;
+}
+table{
+    width: 100%;
+    min-height: 200px;
+}
+.cart{
+    min-height: 300px;
+    text-align: center;
+    width: 40%;
+    float: left;
+    background-color: aquamarine;
+}
+.gio{
+    height: 200px;
+    width: 100%;
+    background-color: burlywood;
+    overflow: scroll;
+    
+}
+#ten{
+    float: left;
+    width: 50%;
+    border-right: 1px solid gray;
+    min-height: 100px;
+}
+#soluong{
+    float: left;
+    width:48%;
+    min-height: 100px;
+}
+button {
+    padding: 5px;
+    width: 60px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aliceblue;
+}
+h2{
+    font-size: 15px;
+}

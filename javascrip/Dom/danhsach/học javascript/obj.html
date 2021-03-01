@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Khởi tạo đối tượng
+        let a=new Object();
+        // let b={};
+        // Khai báo thuỗ tính
+        a.ten="sang";
+        a.tuoi="19";
+        a.job="it";
+        let b={
+            ten:"xuan",
+            tuoi:"19",
+            job:"Baohiem",
+            new:function()
+            {
+                alert("đây là b");
+            }
+        }
+        // them phuong thuc
+        a.new=function()
+        {
+            alert("Đây là thuộc tính a");
+        }
+        document.write(a.ten+":"+a.tuoi);
+        // vi dun đối tượng sinh vien
+        let student={
+            data:[],
+            show:function(){
+                let list=this.data;
+                for(let i=0;i<list.length;i++)
+                {
+                    document.write("<div>"+list[i].id+"|"+list[i].name+"|"+list[i].tuoi+"</div>");
+                }
+            },
+            add:function(id, ten, tuoi)
+            {
+                let item={
+                    id:id,
+                    name:ten,
+                    tuoi:tuoi
+                }
+                this.data.push(item);
+            },
+            remove:function(id)
+            {
+                let list=this.data;
+                for(let i=0;i<list.length;i++)
+                if(this.data[i].id==id)
+                this.data.splice(i, 1);
+
+            },
+            edit:function(id, name, tuoi)
+            {
+                let list=this.data;
+                for(let i=0;i<list.length;i++)
+                if(this.data[i].id==id)
+                {
+                    this.data[i].name=name;
+                    this.data[i].tuoi=tuoi;
+
+                }
+            }
+        }
+        student.add(1, "sang", 19);
+        student.add(2, "Xuân", 19);
+        student.add(3, "Ngọc", 19);
+        student.add(4, "hải", 19);
+        student.show();
+        student.remove(3);
+        student.show();
+        student.edit(2,"Xuan", 20);
+        student.show();
+        
+    </script>
+</body>
+</html>

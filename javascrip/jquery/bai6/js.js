@@ -43,4 +43,16 @@ $(function () {
         $(".noidung2").removeClass('xoay');
         $(".xam").removeClass("new1");
     });
+    $(".nut3").click(function (e) { 
+        e.preventDefault();
+        //xu li class
+        $(".noidung3").addClass("new2");
+        $(".xam").addClass("new1");
+    });
+    $(".nutdong3,.xam").click(function (e) { 
+        e.preventDefault();
+        $(".noidung3").removeClass('new2');
+        $(".xam").removeClass("new1");
+    });
+    
 });

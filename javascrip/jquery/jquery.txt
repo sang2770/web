@@ -29,7 +29,7 @@ transform:translateX(100px);   // qua phải 100px
 transform:translateX(-100px);   // dịch trái 
 transform:translateY(100px);    // dịch xuống
 ->kết hợp nhiều thuộc tính cùng tên viest cùng một dòng cách 1 dấu cách
- transition-dalay:1s   //độ trễ
+ transition-delay:1s   //độ trễ
 transition-timing-function: ease;   nhanh-chậm  //gia tốc
 			   ease-out   chậm dần
 			   ease-in   nhanh dần

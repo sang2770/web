@@ -1,0 +1,70 @@
+.active:hover a{
+    color: lightblue;
+}
+input[type="search"]
+{
+    border-radius: 66px;
+    border: 1px solid white;
+    background: yellow;
+    -webkit-appearance: none;
+    padding-left: 20px;
+    margin-right: 21px;
+    width: 300px;
+    height: 42px;
+    font-weight: bold;
+    color:white;
+}
+.btn:hover{
+    background-color: turquoise;
+}
+/* .carousel{
+    height: 550px;
+} */
+/* #carouselExampleControls{
+    height: 200px;
+} */
+.kenh h2,.phim h2{
+    color: gray;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.kenh img,.phim img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    position: absolute;
+    bottom:10%;
+    left: 10%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffc20e;
+    font-size: 16px;
+    border-left: 1px solid #ffc20e;
+    padding-left: 10px;
+}
+.footer ul{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    width: 50%;
+    margin-left: 28%;
+    margin-top: 10px;
+}
+.footer ul li{
+    margin:10px;
+}
+.footer{
+    border-top: 2px solid #ffc20e;
+}
+.footer h2,.footer h3{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.footer h3{
+    margin-top: 10px;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 30px;
+}

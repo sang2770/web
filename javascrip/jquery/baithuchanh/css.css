@@ -1,0 +1,245 @@
+* {
+    padding: 0px; 
+    margin: 0px; 
+    box-sizing: border-box; 
+   }
+header h1{
+    width: 25%;
+    padding:10px;
+    color:white;
+}
+.noidung h3 {
+   width: 100%;
+   text-align: inherit;
+   padding: 10px;
+   font-size: 15px;
+   color:white;
+   /* background: #95a5a6; */
+   font-weight: normal;
+   font-style: oblique;
+}
+hr{
+    width: 190px;
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+.noidung h1 {
+   width: 100%;
+   /* padding: 2px; */
+   /* text-align: center; */
+   font-size: 18px;
+   color: white;
+   padding-left: 10px;
+}
+.menu h1.tittle {
+   width: 90%;
+   height: 59px;
+   margin: 10px 5px 5px;
+   text-align: center;
+   padding: 2px;
+   color: white;
+   font-size: 30px;
+   }
+.menu img { 
+   width: 100px; height: 100px; border-radius: 100px; margin-left: 50px; margin-top: 17px; }
+header { 
+   width: 100%; height: 59px; background-color:rgb(52, 73, 94); display: flex;
+   z-index: 2;
+}
+h1.tittle { 
+   width: 25%; padding: 12px; margin: 0px; height: 100%; 
+}
+header img { 
+   border-radius: 100px; height: 80%; margin-top: 6px; 
+}
+.login { 
+   margin-left: 40%; 
+}
+header button { 
+    height: 80%;
+   padding: 14px; border-radius: 20px; border: 1px solid white; margin-top: 7px; width: 100px; background: border-box border-box; color: white; }
+.menu { 
+    padding-top:60px;
+   width: 209px; background-color: rgb(52, 73, 94); min-height: 568px; position: fixed; 
+   transition:0.5s;
+   z-index: 7;
+}
+.noidung{
+   width: 100%;
+   margin-bottom: 20px;
+}
+button:hover{
+    background-color: turquoise;
+    cursor: pointer;
+}
+.noidung h1:hover{
+    cursor: pointer;
+}
+.than {
+    width: 100%;
+    overflow: hidden;
+}
+.menu.bienmat{
+    transform:translateX(-300px);
+}
+.banner{
+    width: 100%;
+    height:400px ;
+    position: relative;
+    display: flex;
+}
+.slides{
+    width: 50%;
+    overflow: hidden;
+    height: 400px;
+   margin-left: 8%;
+   position:relative;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+.slide{
+    width: 100%;height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top:0;left: 0;
+}
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+.trai, .phai{
+    position:absolute;
+    top:40%;
+    left: 10%;
+    font-size: 50px;
+    font-weight: bold;
+}
+.phai{
+    left: 53%;
+}
+.trai:hover, .phai:hover{
+    cursor: pointer;
+}
+.mattrai{
+    animation: mattrai 1s forwards;
+}
+@-webkit-keyframes mattrai{
+    0%{opacity: 1;visibility: visible;transform:translateX(0);
+    }
+    100%{opacity: 0;visibility: hidden;transform:translateX(-100%);
+    }
+}
+.vaophai{
+    animation:phai 1s forwards;
+}
+@-webkit-keyframes phai{
+    0%{opacity: 0;visibility: hidden;transform:translateX(100%);
+    }
+    100%{opacity: 1;visibility: visible;transform:translateX(0%);
+    }
+}
+.matphai{
+    animation: matphai 1s forwards;
+}
+@-webkit-keyframes matphai{
+    0%{opacity: 1;visibility: visible;transform:translateX(0);
+    }
+    100%{opacity: 0;visibility: hidden;transform:translateX(100%);
+    }
+}
+.vaotrai{
+    animation:trai 1s forwards;
+}
+@-webkit-keyframes trai{
+    0%{opacity: 0;visibility: hidden;transform:translateX(-100%);
+    }
+    100%{opacity: 1;visibility: visible;transform:translateX(0%);
+    }
+}
+.check{
+    position: absolute;
+    bottom: 10px;
+    left: 28%;
+    display: flex;
+}
+.check h3{
+    width: 20px;
+    height: 20px;
+    border: 2px solid gray;
+    border-radius:80%;
+    margin: 5px;
+}
+.xanh{
+    background-color: lightblue;
+}
+.cart{
+    width: 30%;
+    height: 100% ;
+}
+.cart1{
+    width: 100%;
+    height: 48%;
+    margin: 5px;
+    position: relative;
+}
+.xam{
+    width: 100%; height: 100%; position: absolute; z-index: 2; top:0; background-color: black; 
+    opacity: 0; transition: 0.4s;
+}
+.hinhvuong{
+    width: 90%; height: 90%; position: absolute; z-index: 3; top:10px; left: 20px; border:2px solid white;
+    opacity: 0;
+    transform: scale(0); transition: 0.4s;
+}
+.tieude{
+    position: absolute;
+    font-size: 30px;
+    top:48%;
+    left: 28%; color: white;
+    z-index: 4; transition: 0.4s;
+}
+.doan{
+    position: absolute;
+    font-size: 20px;
+    color: white; z-index: 4;  left: 16%; top:53%;
+    opacity: 0; transition: 0.4s; transform: scale(0);
+}
+.thanh1,.thanh2{
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    top:48%; left: 9%;
+    z-index: 3;
+    transition: 0.4s;
+}
+.thanh2{
+    top:70%;
+}
+.cart:hover{
+    cursor: pointer;
+}
+.cart1:hover .xam{
+    opacity: 0.4;
+}
+.cart1:hover .hinhvuong{
+    opacity: 1;
+    transform: scale(1); 
+}
+.cart1:hover .tieude{
+    top:30%;
+}
+.cart1:hover .doan{
+    opacity: 1; transform: scale(1);
+}
+.cart1:hover .thanh1{
+    transform: translateY(-50px);
+}
+.cart1:hover .thanh2{
+    transform: translateY(40px);
+}
+
