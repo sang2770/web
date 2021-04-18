@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* header */
+.header{
+    text-align: center;
+    padding:20px 0px;
+    border-bottom: 1px solid #ccc;
+}
+/* control */
+.control{
+    display: flex;
+    padding: 20px;
+}
+#table
+{
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+}
+#table th,td{
+    padding: 10px 20px;
+    
+}
+
+.form
+{
+    width: 400px;
+}
+.form input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+.control button{
+    padding:5px 20px;
+    cursor: pointer;
+}
+.form button{
+    margin-top: 10px;
+}
